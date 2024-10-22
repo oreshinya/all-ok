@@ -1,0 +1,29 @@
+{
+  "include": [
+    "src"
+  ],
+  "compilerOptions": {
+    "lib": ["esnext"],
+    "types": ["vitest/globals"],
+    "declaration": true,
+    "isolatedDeclarations": true,
+    "isolatedModules": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "target": "es2022",
+    "strict": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitReturns": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitOverride": true,
+    "noFallthroughCasesInSwitch": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+    "verbatimModuleSyntax": true,
+    "noEmit": true
+  }
+}
