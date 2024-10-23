@@ -19,11 +19,47 @@ type FnAsyncWithContext<TData, TContext> = (
   context: TContext,
 ) => Promise<boolean>;
 
+/**
+ * Define asynchronous check.
+ *
+ * ```ts
+ * import * as aok from 'all-ok';
+ * import { getUserNameUsed } from '~/api';
+ *
+ * type User = { name: string, age: number };
+ *
+ * aok.checkAsync(
+ *   async (user: User) => {
+ *     return !(await getUserNameUsed(user.name);
+ *   },
+ *   "name",
+ *   "The name is used already."
+ * );
+ * ```
+ */
 export function checkAsync<TData>(
   fn: FnAsync<TData>,
   label: string,
   message: string,
 ): CheckAsync<FnAsync<TData>>;
+/**
+ * Define asynchronous check with your any context.
+ *
+ * ```ts
+ * import * as aok from 'all-ok';
+ * import { type Tx, findUserByNameWithLock } from '~/db';
+ *
+ * type User = { name: string, age: number };
+ *
+ * aok.checkAsync(
+ *   async (user: User, context: Tx) => {
+ *     return !(await findUserByNameWithLock(tx, user.name));
+ *   },
+ *   "name",
+ *   "The name is used already."
+ * );
+ * ```
+ */
 export function checkAsync<TData, TContext>(
   fn: FnAsyncWithContext<TData, TContext>,
   label: string,
