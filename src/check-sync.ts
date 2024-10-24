@@ -1,13 +1,14 @@
 import type { ErrorInfo } from "./result";
 
 export type CheckSyncAll<TData, TContext> = CheckSync<
+  string,
   FnSyncAll<TData, TContext>
 >;
 
-export type CheckSync<TFnSync> = {
+export type CheckSync<TLabel, TFnSync> = {
   type: "CheckSync";
   fn: TFnSync;
-  error: ErrorInfo;
+  error: ErrorInfo<TLabel>;
 };
 
 type FnSyncAll<TData, TContext> =
@@ -36,11 +37,11 @@ type FnSyncWithContext<TData, TContext> = (
  * );
  * ```
  */
-export function checkSync<TData>(
+export function checkSync<TLabel extends string, TData>(
   fn: FnSync<TData>,
-  label: string,
+  label: TLabel,
   message: string,
-): CheckSync<FnSync<TData>>;
+): CheckSync<TLabel, FnSync<TData>>;
 /**
  * Define synchronous check with your any context.
  *
@@ -62,15 +63,15 @@ export function checkSync<TData>(
  * );
  * ```
  */
-export function checkSync<TData, TContext>(
+export function checkSync<TLabel extends string, TData, TContext>(
   fn: FnSyncWithContext<TData, TContext>,
-  label: string,
+  label: TLabel,
   message: string,
-): CheckSync<FnSyncWithContext<TData, TContext>>;
-export function checkSync<TData, TContext>(
+): CheckSync<TLabel, FnSyncWithContext<TData, TContext>>;
+export function checkSync<TLabel extends string, TData, TContext>(
   fn: FnSyncAll<TData, TContext>,
-  label: string,
+  label: TLabel,
   message: string,
-): CheckSync<FnSyncAll<TData, TContext>> {
+): CheckSync<TLabel, FnSyncAll<TData, TContext>> {
   return { type: "CheckSync", fn, error: { label, message } };
 }
