@@ -1,15 +1,9 @@
 <h1 align="center">all-ok</h1>
 <p align="center">Validate anything simply and type-safely.</p>
 <p align="center">
-  <a href="https://github.com/oreshinya/all-ok/actions/workflows/check.yml">
-    <img src="https://img.shields.io/github/actions/workflow/status/oreshinya/all-ok/check.yml?branch=main&logo=github&style=flat-square" />
-  </a>
-  <a href="https://opensource.org/licenses/MIT" rel="nofollow">
-    <img src="https://img.shields.io/badge/License-MIT-brightgreen.svg?style=flat-square">
-  </a>
-  <a href="https://npmjs.org/package/all-ok" rel="nofollow">
-    <img src="https://img.shields.io/npm/v/all-ok.svg?style=flat-square">
-  </a>
+<a href="https://github.com/oreshinya/all-ok/actions/workflows/check.yml"><img src="https://img.shields.io/github/actions/workflow/status/oreshinya/all-ok/check.yml?branch=main&logo=github&style=flat-square" /></a>
+<a href="https://opensource.org/licenses/MIT" rel="nofollow"><img src="https://img.shields.io/badge/License-MIT-brightgreen.svg?style=flat-square" /></a>
+<a href="https://npmjs.org/package/all-ok" rel="nofollow"><img src="https://img.shields.io/npm/v/all-ok.svg?style=flat-square" /></a>
 </p>
 
 ## Installation
