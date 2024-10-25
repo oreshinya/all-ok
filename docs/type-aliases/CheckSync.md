@@ -1,31 +1,26 @@
-[**all-ok**](../README.md) • **Docs**
+[**all-ok v0.1.0**](../README.md) • **Docs**
 
 ***
 
-[all-ok](../README.md) / CheckSync
+# Type Alias: CheckSync\<TLabel, TFnSync\>
 
-# Type Alias: CheckSync\<TFnSync\>
-
-> **CheckSync**\<`TFnSync`\>: `object`
+> **CheckSync**\<`TLabel`, `TFnSync`\>: \{`error`: [`ErrorInfo`](ErrorInfo.md)\<`TLabel`\>;`fn`: `TFnSync`;`type`: `"CheckSync"`; \}
 
 ## Type Parameters
 
-• **TFnSync**
+| Type Parameter |
+| ------ |
+| `TLabel` |
+| `TFnSync` |
 
 ## Type declaration
 
-### error
-
-> **error**: [`ErrorInfo`](ErrorInfo.md)
-
-### fn
-
-> **fn**: `TFnSync`
-
-### type
-
-> **type**: `"CheckSync"`
+| Name | Type | Defined in |
+| ------ | ------ | ------ |
+| `error` | [`ErrorInfo`](ErrorInfo.md)\<`TLabel`\> | [check-sync.ts:11](https://github.com/oreshinya/all-ok/blob/7ad66c9c41377006d7fe2b9941a247cf80c6127d/src/check-sync.ts#L11) |
+| `fn` | `TFnSync` | [check-sync.ts:10](https://github.com/oreshinya/all-ok/blob/7ad66c9c41377006d7fe2b9941a247cf80c6127d/src/check-sync.ts#L10) |
+| `type` | `"CheckSync"` | [check-sync.ts:9](https://github.com/oreshinya/all-ok/blob/7ad66c9c41377006d7fe2b9941a247cf80c6127d/src/check-sync.ts#L9) |
 
 ## Defined in
 
-[check-sync.ts:7](https://github.com/oreshinya/all-ok/blob/dfff127c5eb58a58e8edbe24045bd413de99450a/src/check-sync.ts#L7)
+[check-sync.ts:8](https://github.com/oreshinya/all-ok/blob/7ad66c9c41377006d7fe2b9941a247cf80c6127d/src/check-sync.ts#L8)

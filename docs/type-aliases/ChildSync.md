@@ -1,41 +1,25 @@
-[**all-ok**](../README.md) • **Docs**
+[**all-ok v0.1.0**](../README.md) • **Docs**
 
 ***
 
-[all-ok](../README.md) / ChildSync
-
 # Type Alias: ChildSync\<TData, TContext\>
 
-> **ChildSync**\<`TData`, `TContext`\>: `object`
+> **ChildSync**\<`TData`, `TContext`\>: \{`fn`: (`data`: `TData`, `context`: `TContext`, `options`: [`Options`](Options.md)) => [`Result`](Result.md);`type`: `"ChildSync"`; \}
 
 ## Type Parameters
 
-• **TData**
-
-• **TContext**
+| Type Parameter |
+| ------ |
+| `TData` |
+| `TContext` |
 
 ## Type declaration
 
-### fn()
-
-> **fn**: (`data`, `context`, `options`) => [`Result`](Result.md)
-
-#### Parameters
-
-• **data**: `TData`
-
-• **context**: `TContext`
-
-• **options**: [`Options`](Options.md)
-
-#### Returns
-
-[`Result`](Result.md)
-
-### type
-
-> **type**: `"ChildSync"`
+| Name | Type | Defined in |
+| ------ | ------ | ------ |
+| `fn` | (`data`: `TData`, `context`: `TContext`, `options`: [`Options`](Options.md)) => [`Result`](Result.md) | [validation.ts:26](https://github.com/oreshinya/all-ok/blob/7ad66c9c41377006d7fe2b9941a247cf80c6127d/src/validation.ts#L26) |
+| `type` | `"ChildSync"` | [validation.ts:25](https://github.com/oreshinya/all-ok/blob/7ad66c9c41377006d7fe2b9941a247cf80c6127d/src/validation.ts#L25) |
 
 ## Defined in
 
-[validation.ts:24](https://github.com/oreshinya/all-ok/blob/dfff127c5eb58a58e8edbe24045bd413de99450a/src/validation.ts#L24)
+[validation.ts:24](https://github.com/oreshinya/all-ok/blob/7ad66c9c41377006d7fe2b9941a247cf80c6127d/src/validation.ts#L24)

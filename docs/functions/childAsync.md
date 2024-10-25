@@ -1,12 +1,10 @@
-[**all-ok**](../README.md) • **Docs**
+[**all-ok v0.1.0**](../README.md) • **Docs**
 
 ***
 
-[all-ok](../README.md) / childAsync
-
 # Function: childAsync()
 
-> **childAsync**\<`TData`, `TChild`, `TContext`\>(`pick`, `validation`): [`ChildAsync`](../type-aliases/ChildAsync.md)\<`TData`, `TContext`\>
+> **childAsync**\<`TData`, `TChild`, `TContext`\>(`pick`: (`data`: `TData`) => `TChild`, `validation`: [`ValidationAsync`](../type-aliases/ValidationAsync.md)\<`TChild`, `TContext`\>): [`ChildAsync`](../type-aliases/ChildAsync.md)\<`TData`, `TContext`\>
 
 Delegate asynchronous check to descendants.
 
@@ -37,17 +35,18 @@ aok.childAsync(
 
 ## Type Parameters
 
-• **TData**
-
-• **TChild**
-
-• **TContext**
+| Type Parameter |
+| ------ |
+| `TData` |
+| `TChild` |
+| `TContext` |
 
 ## Parameters
 
-• **pick**
-
-• **validation**: [`ValidationAsync`](../type-aliases/ValidationAsync.md)\<`TChild`, `TContext`\>
+| Parameter | Type |
+| ------ | ------ |
+| `pick` | (`data`: `TData`) => `TChild` |
+| `validation` | [`ValidationAsync`](../type-aliases/ValidationAsync.md)\<`TChild`, `TContext`\> |
 
 ## Returns
 
@@ -55,4 +54,4 @@ aok.childAsync(
 
 ## Defined in
 
-[validation.ts:219](https://github.com/oreshinya/all-ok/blob/dfff127c5eb58a58e8edbe24045bd413de99450a/src/validation.ts#L219)
+[validation.ts:219](https://github.com/oreshinya/all-ok/blob/7ad66c9c41377006d7fe2b9941a247cf80c6127d/src/validation.ts#L219)

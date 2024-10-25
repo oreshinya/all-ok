@@ -1,12 +1,10 @@
-[**all-ok**](../README.md) • **Docs**
+[**all-ok v0.1.0**](../README.md) • **Docs**
 
 ***
 
-[all-ok](../README.md) / childSync
-
 # Function: childSync()
 
-> **childSync**\<`TData`, `TChild`, `TContext`\>(`pick`, `validation`): [`ChildSync`](../type-aliases/ChildSync.md)\<`TData`, `TContext`\>
+> **childSync**\<`TData`, `TChild`, `TContext`\>(`pick`: (`data`: `TData`) => `TChild`, `validation`: [`ValidationSync`](../type-aliases/ValidationSync.md)\<`TChild`, `TContext`\>): [`ChildSync`](../type-aliases/ChildSync.md)\<`TData`, `TContext`\>
 
 Delegate synchronous check to descendants.
 
@@ -34,17 +32,18 @@ aok.childSync(
 
 ## Type Parameters
 
-• **TData**
-
-• **TChild**
-
-• **TContext**
+| Type Parameter |
+| ------ |
+| `TData` |
+| `TChild` |
+| `TContext` |
 
 ## Parameters
 
-• **pick**
-
-• **validation**: [`ValidationSync`](../type-aliases/ValidationSync.md)\<`TChild`, `TContext`\>
+| Parameter | Type |
+| ------ | ------ |
+| `pick` | (`data`: `TData`) => `TChild` |
+| `validation` | [`ValidationSync`](../type-aliases/ValidationSync.md)\<`TChild`, `TContext`\> |
 
 ## Returns
 
@@ -52,4 +51,4 @@ aok.childSync(
 
 ## Defined in
 
-[validation.ts:54](https://github.com/oreshinya/all-ok/blob/dfff127c5eb58a58e8edbe24045bd413de99450a/src/validation.ts#L54)
+[validation.ts:54](https://github.com/oreshinya/all-ok/blob/7ad66c9c41377006d7fe2b9941a247cf80c6127d/src/validation.ts#L54)

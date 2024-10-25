@@ -1,41 +1,25 @@
-[**all-ok**](../README.md) • **Docs**
+[**all-ok v0.1.0**](../README.md) • **Docs**
 
 ***
 
-[all-ok](../README.md) / ChildAsync
-
 # Type Alias: ChildAsync\<TData, TContext\>
 
-> **ChildAsync**\<`TData`, `TContext`\>: `object`
+> **ChildAsync**\<`TData`, `TContext`\>: \{`fn`: (`data`: `TData`, `context`: `TContext`, `options`: [`Options`](Options.md)) => `Promise`\<[`Result`](Result.md)\>;`type`: `"ChildAsync"`; \}
 
 ## Type Parameters
 
-• **TData**
-
-• **TContext**
+| Type Parameter |
+| ------ |
+| `TData` |
+| `TContext` |
 
 ## Type declaration
 
-### fn()
-
-> **fn**: (`data`, `context`, `options`) => `Promise`\<[`Result`](Result.md)\>
-
-#### Parameters
-
-• **data**: `TData`
-
-• **context**: `TContext`
-
-• **options**: [`Options`](Options.md)
-
-#### Returns
-
-`Promise`\<[`Result`](Result.md)\>
-
-### type
-
-> **type**: `"ChildAsync"`
+| Name | Type | Defined in |
+| ------ | ------ | ------ |
+| `fn` | (`data`: `TData`, `context`: `TContext`, `options`: [`Options`](Options.md)) => `Promise`\<[`Result`](Result.md)\> | [validation.ts:188](https://github.com/oreshinya/all-ok/blob/7ad66c9c41377006d7fe2b9941a247cf80c6127d/src/validation.ts#L188) |
+| `type` | `"ChildAsync"` | [validation.ts:187](https://github.com/oreshinya/all-ok/blob/7ad66c9c41377006d7fe2b9941a247cf80c6127d/src/validation.ts#L187) |
 
 ## Defined in
 
-[validation.ts:186](https://github.com/oreshinya/all-ok/blob/dfff127c5eb58a58e8edbe24045bd413de99450a/src/validation.ts#L186)
+[validation.ts:186](https://github.com/oreshinya/all-ok/blob/7ad66c9c41377006d7fe2b9941a247cf80c6127d/src/validation.ts#L186)

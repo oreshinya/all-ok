@@ -4,5 +4,13 @@
     "typedoc-plugin-missing-exports"
   ],
   "entryPoints": ["src/index.ts"],
+  "readme": "none",
+  "includeVersion": true,
+  "hideBreadcrumbs": true,
+  "expandObjects": true,
+  "expandParameters": true,
+  "indexFormat": "table",
+  "parametersFormat": "table",
+  "typeDeclarationFormat": "table",
   "out": "docs"
 }

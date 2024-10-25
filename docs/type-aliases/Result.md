@@ -1,13 +1,11 @@
-[**all-ok**](../README.md) • **Docs**
+[**all-ok v0.1.0**](../README.md) • **Docs**
 
 ***
 
-[all-ok](../README.md) / Result
-
 # Type Alias: Result
 
-> **Result**: `object` \| `object`
+> **Result**: \{`ok`: `true`; \} \| \{`errors`: [`ErrorInfo`](ErrorInfo.md)\<`string`\>[];`ok`: `false`; \}
 
 ## Defined in
 
-[result.ts:3](https://github.com/oreshinya/all-ok/blob/dfff127c5eb58a58e8edbe24045bd413de99450a/src/result.ts#L3)
+[result.ts:3](https://github.com/oreshinya/all-ok/blob/7ad66c9c41377006d7fe2b9941a247cf80c6127d/src/result.ts#L3)

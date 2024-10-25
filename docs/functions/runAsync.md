@@ -1,12 +1,10 @@
-[**all-ok**](../README.md) • **Docs**
+[**all-ok v0.1.0**](../README.md) • **Docs**
 
 ***
 
-[all-ok](../README.md) / runAsync
-
 # Function: runAsync()
 
-> **runAsync**\<`TData`\>(`validation`, `data`, `options`): `Promise`\<[`Result`](../type-aliases/Result.md)\>
+> **runAsync**\<`TData`\>(`validation`: [`ValidationAsync`](../type-aliases/ValidationAsync.md)\<`TData`, `undefined`\>, `data`: `TData`, `options`: [`Options`](../type-aliases/Options.md)): `Promise`\<[`Result`](../type-aliases/Result.md)\>
 
 Run asynchronous validations.
 
@@ -53,15 +51,17 @@ await aok.runAsync(
 
 ## Type Parameters
 
-• **TData**
+| Type Parameter |
+| ------ |
+| `TData` |
 
 ## Parameters
 
-• **validation**: [`ValidationAsync`](../type-aliases/ValidationAsync.md)\<`TData`, `undefined`\>
-
-• **data**: `TData`
-
-• **options**: [`Options`](../type-aliases/Options.md) = `{}`
+| Parameter | Type |
+| ------ | ------ |
+| `validation` | [`ValidationAsync`](../type-aliases/ValidationAsync.md)\<`TData`, `undefined`\> |
+| `data` | `TData` |
+| `options` | [`Options`](../type-aliases/Options.md) |
 
 ## Returns
 
@@ -69,4 +69,4 @@ await aok.runAsync(
 
 ## Defined in
 
-[validation.ts:377](https://github.com/oreshinya/all-ok/blob/dfff127c5eb58a58e8edbe24045bd413de99450a/src/validation.ts#L377)
+[validation.ts:377](https://github.com/oreshinya/all-ok/blob/7ad66c9c41377006d7fe2b9941a247cf80c6127d/src/validation.ts#L377)

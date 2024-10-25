@@ -1,19 +1,18 @@
-[**all-ok**](../../README.md) • **Docs**
+[**all-ok v0.1.0**](../../README.md) • **Docs**
 
 ***
 
-[all-ok](../../README.md) / [\<internal\>](../README.md) / CheckAsyncAll
-
 # Type Alias: CheckAsyncAll\<TData, TContext\>
 
-> **CheckAsyncAll**\<`TData`, `TContext`\>: [`CheckAsync`](../../type-aliases/CheckAsync.md)\<[`FnAsyncAll`](FnAsyncAll.md)\<`TData`, `TContext`\>\>
+> **CheckAsyncAll**\<`TData`, `TContext`\>: [`CheckAsync`](../../type-aliases/CheckAsync.md)\<`string`, [`FnAsyncAll`](FnAsyncAll.md)\<`TData`, `TContext`\>\>
 
 ## Type Parameters
 
-• **TData**
-
-• **TContext**
+| Type Parameter |
+| ------ |
+| `TData` |
+| `TContext` |
 
 ## Defined in
 
-[check-async.ts:3](https://github.com/oreshinya/all-ok/blob/dfff127c5eb58a58e8edbe24045bd413de99450a/src/check-async.ts#L3)
+[check-async.ts:3](https://github.com/oreshinya/all-ok/blob/7ad66c9c41377006d7fe2b9941a247cf80c6127d/src/check-async.ts#L3)

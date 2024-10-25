@@ -1,23 +1,24 @@
-[**all-ok**](../README.md) • **Docs**
+[**all-ok v0.1.0**](../README.md) • **Docs**
 
 ***
 
-[all-ok](../README.md) / ErrorInfo
+# Type Alias: ErrorInfo\<TLabel\>
 
-# Type Alias: ErrorInfo
+> **ErrorInfo**\<`TLabel`\>: \{`label`: `TLabel`;`message`: `string`; \}
 
-> **ErrorInfo**: `object`
+## Type Parameters
+
+| Type Parameter |
+| ------ |
+| `TLabel` |
 
 ## Type declaration
 
-### label
-
-> **label**: `string`
-
-### message
-
-> **message**: `string`
+| Name | Type | Defined in |
+| ------ | ------ | ------ |
+| `label` | `TLabel` | [result.ts:1](https://github.com/oreshinya/all-ok/blob/7ad66c9c41377006d7fe2b9941a247cf80c6127d/src/result.ts#L1) |
+| `message` | `string` | [result.ts:1](https://github.com/oreshinya/all-ok/blob/7ad66c9c41377006d7fe2b9941a247cf80c6127d/src/result.ts#L1) |
 
 ## Defined in
 
-[result.ts:1](https://github.com/oreshinya/all-ok/blob/dfff127c5eb58a58e8edbe24045bd413de99450a/src/result.ts#L1)
+[result.ts:1](https://github.com/oreshinya/all-ok/blob/7ad66c9c41377006d7fe2b9941a247cf80c6127d/src/result.ts#L1)

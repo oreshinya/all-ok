@@ -1,21 +1,17 @@
-[**all-ok**](../README.md) • **Docs**
+[**all-ok v0.1.0**](../README.md) • **Docs**
 
 ***
 
-[all-ok](../README.md) / Options
-
 # Type Alias: Options
 
-> **Options**: `object`
+> **Options**: \{`abortEarly`: `boolean`; \}
 
 ## Type declaration
 
-### abortEarly?
-
-> `optional` **abortEarly**: `boolean`
-
-If you set abortEarly to true, the runner immediately abort the validation after finding the first error.
+| Name | Type | Description | Defined in |
+| ------ | ------ | ------ | ------ |
+| `abortEarly`? | `boolean` | If you set abortEarly to true, the runner immediately abort the validation after finding the first error. | [validation.ts:21](https://github.com/oreshinya/all-ok/blob/7ad66c9c41377006d7fe2b9941a247cf80c6127d/src/validation.ts#L21) |
 
 ## Defined in
 
-[validation.ts:17](https://github.com/oreshinya/all-ok/blob/dfff127c5eb58a58e8edbe24045bd413de99450a/src/validation.ts#L17)
+[validation.ts:17](https://github.com/oreshinya/all-ok/blob/7ad66c9c41377006d7fe2b9941a247cf80c6127d/src/validation.ts#L17)

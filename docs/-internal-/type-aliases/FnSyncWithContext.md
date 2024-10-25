@@ -1,24 +1,24 @@
-[**all-ok**](../../README.md) • **Docs**
+[**all-ok v0.1.0**](../../README.md) • **Docs**
 
 ***
 
-[all-ok](../../README.md) / [\<internal\>](../README.md) / FnSyncWithContext
-
 # Type Alias: FnSyncWithContext()\<TData, TContext\>
 
-> **FnSyncWithContext**\<`TData`, `TContext`\>: (`data`, `context`) => `boolean`
+> **FnSyncWithContext**\<`TData`, `TContext`\>: (`data`: `TData`, `context`: `TContext`) => `boolean`
 
 ## Type Parameters
 
-• **TData**
-
-• **TContext**
+| Type Parameter |
+| ------ |
+| `TData` |
+| `TContext` |
 
 ## Parameters
 
-• **data**: `TData`
-
-• **context**: `TContext`
+| Parameter | Type |
+| ------ | ------ |
+| `data` | `TData` |
+| `context` | `TContext` |
 
 ## Returns
 
@@ -26,4 +26,4 @@
 
 ## Defined in
 
-[check-sync.ts:17](https://github.com/oreshinya/all-ok/blob/dfff127c5eb58a58e8edbe24045bd413de99450a/src/check-sync.ts#L17)
+[check-sync.ts:18](https://github.com/oreshinya/all-ok/blob/7ad66c9c41377006d7fe2b9941a247cf80c6127d/src/check-sync.ts#L18)
