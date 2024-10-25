@@ -4,6 +4,7 @@
     "typedoc-plugin-missing-exports"
   ],
   "entryPoints": ["src/index.ts"],
+  "disableSources": true,
   "readme": "none",
   "includeVersion": true,
   "hideBreadcrumbs": true,
