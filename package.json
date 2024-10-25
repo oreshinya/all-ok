@@ -29,6 +29,10 @@
       }
     }
   },
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
   "scripts": {
     "docsgen": "typedoc",
     "typecheck": "tsc",

@@ -1,3 +1,6 @@
+inputs:
+  registry-url:
+    description: The registry url for publishing.
 runs:
   using: "composite"
   steps:
@@ -8,5 +11,6 @@ runs:
         node-version: 22
         cache: "pnpm"
         cache-dependency-path: ./pnpm-lock.yaml
+        registry-url: ${{ inputs.registry-url }}
     - run: pnpm install
       shell: bash
