@@ -1,4 +1,4 @@
-[**all-ok v0.1.0**](../../README.md) • **Docs**
+[**all-ok v0.1.1**](../../README.md) • **Docs**
 
 ***
 
