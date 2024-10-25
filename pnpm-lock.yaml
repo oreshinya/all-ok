@@ -11,9 +11,6 @@ importers:
       '@biomejs/biome':
         specifier: 1.9.4
         version: 1.9.4
-      '@types/node':
-        specifier: ^22.7.9
-        version: 22.7.9
       tsup:
         specifier: ^8.3.0
         version: 8.3.0(postcss@8.4.47)(typescript@5.6.3)(yaml@2.6.0)
@@ -1527,6 +1524,7 @@ snapshots:
   '@types/node@22.7.9':
     dependencies:
       undici-types: 6.19.8
+    optional: true
 
   '@types/unist@3.0.3': {}
 
@@ -2149,7 +2147,8 @@ snapshots:
 
   uc.micro@2.1.0: {}
 
-  undici-types@6.19.8: {}
+  undici-types@6.19.8:
+    optional: true
 
   unist-util-is@6.0.0:
     dependencies:
