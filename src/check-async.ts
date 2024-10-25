@@ -1,13 +1,14 @@
 import type { ErrorInfo } from "./result";
 
 export type CheckAsyncAll<TData, TContext> = CheckAsync<
+  string,
   FnAsyncAll<TData, TContext>
 >;
 
-export type CheckAsync<TFnAync> = {
+export type CheckAsync<TLabel, TFnAync> = {
   type: "CheckAsync";
   fn: TFnAync;
-  error: ErrorInfo;
+  error: ErrorInfo<TLabel>;
 };
 
 type FnAsyncAll<TData, TContext> =
@@ -37,11 +38,11 @@ type FnAsyncWithContext<TData, TContext> = (
  * );
  * ```
  */
-export function checkAsync<TData>(
+export function checkAsync<TLabel extends string, TData>(
   fn: FnAsync<TData>,
-  label: string,
+  label: TLabel,
   message: string,
-): CheckAsync<FnAsync<TData>>;
+): CheckAsync<TLabel, FnAsync<TData>>;
 /**
  * Define asynchronous check with your any context.
  *
@@ -60,15 +61,15 @@ export function checkAsync<TData>(
  * );
  * ```
  */
-export function checkAsync<TData, TContext>(
+export function checkAsync<TLabel extends string, TData, TContext>(
   fn: FnAsyncWithContext<TData, TContext>,
-  label: string,
+  label: TLabel,
   message: string,
-): CheckAsync<FnAsyncWithContext<TData, TContext>>;
-export function checkAsync<TData, TContext>(
+): CheckAsync<TLabel, FnAsyncWithContext<TData, TContext>>;
+export function checkAsync<TLabel extends string, TData, TContext>(
   fn: FnAsyncAll<TData, TContext>,
-  label: string,
+  label: TLabel,
   message: string,
-): CheckAsync<FnAsyncAll<TData, TContext>> {
+): CheckAsync<TLabel, FnAsyncAll<TData, TContext>> {
   return { type: "CheckAsync", fn, error: { label, message } };
 }

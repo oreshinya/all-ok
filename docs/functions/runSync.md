@@ -1,12 +1,10 @@
-[**all-ok**](../README.md) • **Docs**
+[**all-ok v0.1.0**](../README.md) • **Docs**
 
 ***
 
-[all-ok](../README.md) / runSync
-
 # Function: runSync()
 
-> **runSync**\<`TData`\>(`validation`, `data`, `options`): [`Result`](../type-aliases/Result.md)
+> **runSync**\<`TData`\>(`validation`: [`ValidationSync`](../type-aliases/ValidationSync.md)\<`TData`, `unknown`\>, `data`: `TData`, `options`: [`Options`](../type-aliases/Options.md)): [`Result`](../type-aliases/Result.md)
 
 Run synchronous validations.
 
@@ -45,20 +43,18 @@ aok.runSync(
 
 ## Type Parameters
 
-• **TData**
+| Type Parameter |
+| ------ |
+| `TData` |
 
 ## Parameters
 
-• **validation**: [`ValidationSync`](../type-aliases/ValidationSync.md)\<`TData`, `undefined`\>
-
-• **data**: `TData`
-
-• **options**: [`Options`](../type-aliases/Options.md) = `{}`
+| Parameter | Type |
+| ------ | ------ |
+| `validation` | [`ValidationSync`](../type-aliases/ValidationSync.md)\<`TData`, `unknown`\> |
+| `data` | `TData` |
+| `options` | [`Options`](../type-aliases/Options.md) |
 
 ## Returns
 
 [`Result`](../type-aliases/Result.md)
-
-## Defined in
-
-[validation.ts:178](https://github.com/oreshinya/all-ok/blob/dfff127c5eb58a58e8edbe24045bd413de99450a/src/validation.ts#L178)

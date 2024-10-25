@@ -281,7 +281,9 @@ suite("Combine with valibot", () => {
       name: v.string(),
       age: v.pipe(v.number(), v.check(checkEven.fn, checkEven.error.message)),
     }),
-    v.forward(v.check(checkPresent.fn, checkPresent.error.message), ["name"]),
+    v.forward(v.check(checkPresent.fn, checkPresent.error.message), [
+      checkPresent.error.label,
+    ]),
   );
 
   test("Parse failure", () => {

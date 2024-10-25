@@ -1,14 +1,12 @@
-[**all-ok**](../README.md) • **Docs**
+[**all-ok v0.1.0**](../README.md) • **Docs**
 
 ***
-
-[all-ok](../README.md) / checkAsync
 
 # Function: checkAsync()
 
 ## checkAsync(fn, label, message)
 
-> **checkAsync**\<`TData`\>(`fn`, `label`, `message`): [`CheckAsync`](../type-aliases/CheckAsync.md)\<[`FnAsync`](../-internal-/type-aliases/FnAsync.md)\<`TData`\>\>
+> **checkAsync**\<`TLabel`, `TData`\>(`fn`: [`FnAsync`](../-internal-/type-aliases/FnAsync.md)\<`TData`\>, `label`: `TLabel`, `message`: `string`): [`CheckAsync`](../type-aliases/CheckAsync.md)\<`TLabel`, [`FnAsync`](../-internal-/type-aliases/FnAsync.md)\<`TData`\>\>
 
 Define asynchronous check.
 
@@ -29,27 +27,26 @@ aok.checkAsync(
 
 ### Type Parameters
 
-• **TData**
+| Type Parameter |
+| ------ |
+| `TLabel` *extends* `string` |
+| `TData` |
 
 ### Parameters
 
-• **fn**: [`FnAsync`](../-internal-/type-aliases/FnAsync.md)\<`TData`\>
-
-• **label**: `string`
-
-• **message**: `string`
+| Parameter | Type |
+| ------ | ------ |
+| `fn` | [`FnAsync`](../-internal-/type-aliases/FnAsync.md)\<`TData`\> |
+| `label` | `TLabel` |
+| `message` | `string` |
 
 ### Returns
 
-[`CheckAsync`](../type-aliases/CheckAsync.md)\<[`FnAsync`](../-internal-/type-aliases/FnAsync.md)\<`TData`\>\>
-
-### Defined in
-
-[check-async.ts:40](https://github.com/oreshinya/all-ok/blob/dfff127c5eb58a58e8edbe24045bd413de99450a/src/check-async.ts#L40)
+[`CheckAsync`](../type-aliases/CheckAsync.md)\<`TLabel`, [`FnAsync`](../-internal-/type-aliases/FnAsync.md)\<`TData`\>\>
 
 ## checkAsync(fn, label, message)
 
-> **checkAsync**\<`TData`, `TContext`\>(`fn`, `label`, `message`): [`CheckAsync`](../type-aliases/CheckAsync.md)\<[`FnAsyncWithContext`](../-internal-/type-aliases/FnAsyncWithContext.md)\<`TData`, `TContext`\>\>
+> **checkAsync**\<`TLabel`, `TData`, `TContext`\>(`fn`: [`FnAsyncWithContext`](../-internal-/type-aliases/FnAsyncWithContext.md)\<`TData`, `TContext`\>, `label`: `TLabel`, `message`: `string`): [`CheckAsync`](../type-aliases/CheckAsync.md)\<`TLabel`, [`FnAsyncWithContext`](../-internal-/type-aliases/FnAsyncWithContext.md)\<`TData`, `TContext`\>\>
 
 Define asynchronous check with your any context.
 
@@ -70,22 +67,20 @@ aok.checkAsync(
 
 ### Type Parameters
 
-• **TData**
-
-• **TContext**
+| Type Parameter |
+| ------ |
+| `TLabel` *extends* `string` |
+| `TData` |
+| `TContext` |
 
 ### Parameters
 
-• **fn**: [`FnAsyncWithContext`](../-internal-/type-aliases/FnAsyncWithContext.md)\<`TData`, `TContext`\>
-
-• **label**: `string`
-
-• **message**: `string`
+| Parameter | Type |
+| ------ | ------ |
+| `fn` | [`FnAsyncWithContext`](../-internal-/type-aliases/FnAsyncWithContext.md)\<`TData`, `TContext`\> |
+| `label` | `TLabel` |
+| `message` | `string` |
 
 ### Returns
 
-[`CheckAsync`](../type-aliases/CheckAsync.md)\<[`FnAsyncWithContext`](../-internal-/type-aliases/FnAsyncWithContext.md)\<`TData`, `TContext`\>\>
-
-### Defined in
-
-[check-async.ts:63](https://github.com/oreshinya/all-ok/blob/dfff127c5eb58a58e8edbe24045bd413de99450a/src/check-async.ts#L63)
+[`CheckAsync`](../type-aliases/CheckAsync.md)\<`TLabel`, [`FnAsyncWithContext`](../-internal-/type-aliases/FnAsyncWithContext.md)\<`TData`, `TContext`\>\>

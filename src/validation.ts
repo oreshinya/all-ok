@@ -3,11 +3,11 @@ import type { CheckSyncAll } from "./check-sync";
 import type { Result } from "./result";
 import { toResult } from "./result";
 
-export type ValidationSync<TData, TContext> = Array<
+export type ValidationSync<TData, TContext = unknown> = Array<
   CheckSyncAll<TData, TContext> | ChildSync<TData, TContext>
 >;
 
-export type ValidationAsync<TData, TContext> = Array<
+export type ValidationAsync<TData, TContext = unknown> = Array<
   | CheckSyncAll<TData, TContext>
   | CheckAsyncAll<TData, TContext>
   | ChildSync<TData, TContext>
@@ -176,7 +176,7 @@ export function runSyncWithContext<TData, TContext>(
  * ```
  */
 export function runSync<TData>(
-  validation: ValidationSync<TData, undefined>,
+  validation: ValidationSync<TData>,
   data: TData,
   options: Options = {},
 ): Result {
@@ -375,7 +375,7 @@ export async function runAsyncWithContext<TData, TContext>(
  * ```
  */
 export async function runAsync<TData>(
-  validation: ValidationAsync<TData, undefined>,
+  validation: ValidationAsync<TData>,
   data: TData,
   options: Options = {},
 ): Promise<Result> {

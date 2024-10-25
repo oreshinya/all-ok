@@ -1,25 +1,23 @@
-[**all-ok**](../../README.md) • **Docs**
+[**all-ok v0.1.0**](../../README.md) • **Docs**
 
 ***
 
-[all-ok](../../README.md) / [\<internal\>](../README.md) / FnAsync
-
 # Type Alias: FnAsync()\<TData\>
 
-> **FnAsync**\<`TData`\>: (`data`) => `Promise`\<`boolean`\>
+> **FnAsync**\<`TData`\>: (`data`: `TData`) => `Promise`\<`boolean`\>
 
 ## Type Parameters
 
-• **TData**
+| Type Parameter |
+| ------ |
+| `TData` |
 
 ## Parameters
 
-• **data**: `TData`
+| Parameter | Type |
+| ------ | ------ |
+| `data` | `TData` |
 
 ## Returns
 
 `Promise`\<`boolean`\>
-
-## Defined in
-
-[check-async.ts:16](https://github.com/oreshinya/all-ok/blob/dfff127c5eb58a58e8edbe24045bd413de99450a/src/check-async.ts#L16)

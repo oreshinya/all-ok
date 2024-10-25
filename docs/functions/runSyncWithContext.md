@@ -1,12 +1,10 @@
-[**all-ok**](../README.md) • **Docs**
+[**all-ok v0.1.0**](../README.md) • **Docs**
 
 ***
 
-[all-ok](../README.md) / runSyncWithContext
-
 # Function: runSyncWithContext()
 
-> **runSyncWithContext**\<`TData`, `TContext`\>(`validation`, `data`, `context`, `options`): [`Result`](../type-aliases/Result.md)
+> **runSyncWithContext**\<`TData`, `TContext`\>(`validation`: [`ValidationSync`](../type-aliases/ValidationSync.md)\<`TData`, `TContext`\>, `data`: `TData`, `context`: `TContext`, `options`: [`Options`](../type-aliases/Options.md)): [`Result`](../type-aliases/Result.md)
 
 Run synchronous validations with your any context.
 
@@ -51,24 +49,20 @@ aok.runSyncWithContext(
 
 ## Type Parameters
 
-• **TData**
-
-• **TContext**
+| Type Parameter |
+| ------ |
+| `TData` |
+| `TContext` |
 
 ## Parameters
 
-• **validation**: [`ValidationSync`](../type-aliases/ValidationSync.md)\<`TData`, `TContext`\>
-
-• **data**: `TData`
-
-• **context**: `TContext`
-
-• **options**: [`Options`](../type-aliases/Options.md) = `{}`
+| Parameter | Type |
+| ------ | ------ |
+| `validation` | [`ValidationSync`](../type-aliases/ValidationSync.md)\<`TData`, `TContext`\> |
+| `data` | `TData` |
+| `context` | `TContext` |
+| `options` | [`Options`](../type-aliases/Options.md) |
 
 ## Returns
 
 [`Result`](../type-aliases/Result.md)
-
-## Defined in
-
-[validation.ts:108](https://github.com/oreshinya/all-ok/blob/dfff127c5eb58a58e8edbe24045bd413de99450a/src/validation.ts#L108)

@@ -1,14 +1,12 @@
-[**all-ok**](../README.md) • **Docs**
+[**all-ok v0.1.0**](../README.md) • **Docs**
 
 ***
-
-[all-ok](../README.md) / checkSync
 
 # Function: checkSync()
 
 ## checkSync(fn, label, message)
 
-> **checkSync**\<`TData`\>(`fn`, `label`, `message`): [`CheckSync`](../type-aliases/CheckSync.md)\<[`FnSync`](../-internal-/type-aliases/FnSync.md)\<`TData`\>\>
+> **checkSync**\<`TLabel`, `TData`\>(`fn`: [`FnSync`](../-internal-/type-aliases/FnSync.md)\<`TData`\>, `label`: `TLabel`, `message`: `string`): [`CheckSync`](../type-aliases/CheckSync.md)\<`TLabel`, [`FnSync`](../-internal-/type-aliases/FnSync.md)\<`TData`\>\>
 
 Define synchronous check.
 
@@ -28,27 +26,26 @@ aok.checkSync(
 
 ### Type Parameters
 
-• **TData**
+| Type Parameter |
+| ------ |
+| `TLabel` *extends* `string` |
+| `TData` |
 
 ### Parameters
 
-• **fn**: [`FnSync`](../-internal-/type-aliases/FnSync.md)\<`TData`\>
-
-• **label**: `string`
-
-• **message**: `string`
+| Parameter | Type |
+| ------ | ------ |
+| `fn` | [`FnSync`](../-internal-/type-aliases/FnSync.md)\<`TData`\> |
+| `label` | `TLabel` |
+| `message` | `string` |
 
 ### Returns
 
-[`CheckSync`](../type-aliases/CheckSync.md)\<[`FnSync`](../-internal-/type-aliases/FnSync.md)\<`TData`\>\>
-
-### Defined in
-
-[check-sync.ts:39](https://github.com/oreshinya/all-ok/blob/dfff127c5eb58a58e8edbe24045bd413de99450a/src/check-sync.ts#L39)
+[`CheckSync`](../type-aliases/CheckSync.md)\<`TLabel`, [`FnSync`](../-internal-/type-aliases/FnSync.md)\<`TData`\>\>
 
 ## checkSync(fn, label, message)
 
-> **checkSync**\<`TData`, `TContext`\>(`fn`, `label`, `message`): [`CheckSync`](../type-aliases/CheckSync.md)\<[`FnSyncWithContext`](../-internal-/type-aliases/FnSyncWithContext.md)\<`TData`, `TContext`\>\>
+> **checkSync**\<`TLabel`, `TData`, `TContext`\>(`fn`: [`FnSyncWithContext`](../-internal-/type-aliases/FnSyncWithContext.md)\<`TData`, `TContext`\>, `label`: `TLabel`, `message`: `string`): [`CheckSync`](../type-aliases/CheckSync.md)\<`TLabel`, [`FnSyncWithContext`](../-internal-/type-aliases/FnSyncWithContext.md)\<`TData`, `TContext`\>\>
 
 Define synchronous check with your any context.
 
@@ -72,22 +69,20 @@ aok.checkSync(
 
 ### Type Parameters
 
-• **TData**
-
-• **TContext**
+| Type Parameter |
+| ------ |
+| `TLabel` *extends* `string` |
+| `TData` |
+| `TContext` |
 
 ### Parameters
 
-• **fn**: [`FnSyncWithContext`](../-internal-/type-aliases/FnSyncWithContext.md)\<`TData`, `TContext`\>
-
-• **label**: `string`
-
-• **message**: `string`
+| Parameter | Type |
+| ------ | ------ |
+| `fn` | [`FnSyncWithContext`](../-internal-/type-aliases/FnSyncWithContext.md)\<`TData`, `TContext`\> |
+| `label` | `TLabel` |
+| `message` | `string` |
 
 ### Returns
 
-[`CheckSync`](../type-aliases/CheckSync.md)\<[`FnSyncWithContext`](../-internal-/type-aliases/FnSyncWithContext.md)\<`TData`, `TContext`\>\>
-
-### Defined in
-
-[check-sync.ts:65](https://github.com/oreshinya/all-ok/blob/dfff127c5eb58a58e8edbe24045bd413de99450a/src/check-sync.ts#L65)
+[`CheckSync`](../type-aliases/CheckSync.md)\<`TLabel`, [`FnSyncWithContext`](../-internal-/type-aliases/FnSyncWithContext.md)\<`TData`, `TContext`\>\>

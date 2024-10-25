@@ -1,31 +1,22 @@
-[**all-ok**](../README.md) • **Docs**
+[**all-ok v0.1.0**](../README.md) • **Docs**
 
 ***
 
-[all-ok](../README.md) / CheckAsync
+# Type Alias: CheckAsync\<TLabel, TFnAync\>
 
-# Type Alias: CheckAsync\<TFnAync\>
-
-> **CheckAsync**\<`TFnAync`\>: `object`
+> **CheckAsync**\<`TLabel`, `TFnAync`\>: \{`error`: [`ErrorInfo`](ErrorInfo.md)\<`TLabel`\>;`fn`: `TFnAync`;`type`: `"CheckAsync"`; \}
 
 ## Type Parameters
 
-• **TFnAync**
+| Type Parameter |
+| ------ |
+| `TLabel` |
+| `TFnAync` |
 
 ## Type declaration
 
-### error
-
-> **error**: [`ErrorInfo`](ErrorInfo.md)
-
-### fn
-
-> **fn**: `TFnAync`
-
-### type
-
-> **type**: `"CheckAsync"`
-
-## Defined in
-
-[check-async.ts:7](https://github.com/oreshinya/all-ok/blob/dfff127c5eb58a58e8edbe24045bd413de99450a/src/check-async.ts#L7)
+| Name | Type |
+| ------ | ------ |
+| `error` | [`ErrorInfo`](ErrorInfo.md)\<`TLabel`\> |
+| `fn` | `TFnAync` |
+| `type` | `"CheckAsync"` |
