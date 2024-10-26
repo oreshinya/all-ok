@@ -1,8 +1,40 @@
+import type { Brand, BrandName } from "./brand";
+import type { BrandedOptions, NonBrandedOptions, Options } from "./options";
 import type { Result } from "./result";
 import { toResult } from "./result";
-import type { Options, ValidationAsync } from "./validation";
+import type { ValidationAsync } from "./validation";
 import { processAsync } from "./validation";
 
+/**
+ * @overload
+ */
+export async function runAsyncWithContext<TData, TContext>(
+  validation: ValidationAsync<TData, TContext>,
+  data: TData,
+  context: TContext,
+): Promise<Result<TData>>;
+/**
+ * @overload
+ */
+export async function runAsyncWithContext<TData, TContext>(
+  validation: ValidationAsync<TData, TContext>,
+  data: TData,
+  context: TContext,
+  options: NonBrandedOptions,
+): Promise<Result<TData>>;
+/**
+ * @overload
+ */
+export async function runAsyncWithContext<
+  TData,
+  TContext,
+  TBrandName extends BrandName,
+>(
+  validation: ValidationAsync<TData, TContext>,
+  data: TData,
+  context: TContext,
+  options: BrandedOptions<TBrandName>,
+): Promise<Result<TData & Brand<TBrandName>>>;
 /**
  * Run asynchronous validations with your any context.
  *
@@ -61,6 +93,29 @@ export async function runAsyncWithContext<TData, TContext>(
   return toResult(data, errors);
 }
 
+/**
+ * @overload
+ */
+export async function runAsync<TData>(
+  validation: ValidationAsync<TData>,
+  data: TData,
+): Promise<Result<TData>>;
+/**
+ * @overload
+ */
+export async function runAsync<TData>(
+  validation: ValidationAsync<TData>,
+  data: TData,
+  options: NonBrandedOptions,
+): Promise<Result<TData>>;
+/**
+ * @overload
+ */
+export async function runAsync<TData, TBrandName extends BrandName>(
+  validation: ValidationAsync<TData>,
+  data: TData,
+  options: BrandedOptions<TBrandName>,
+): Promise<Result<TData & Brand<TBrandName>>>;
 /**
  * Run asynchronous validations.
  *

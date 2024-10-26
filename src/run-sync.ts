@@ -1,8 +1,40 @@
+import type { Brand, BrandName } from "./brand";
+import type { BrandedOptions, NonBrandedOptions, Options } from "./options";
 import type { Result } from "./result";
 import { toResult } from "./result";
-import type { Options, ValidationSync } from "./validation";
+import type { ValidationSync } from "./validation";
 import { processSync } from "./validation";
 
+/**
+ * @overload
+ */
+export function runSyncWithContext<TData, TContext>(
+  validation: ValidationSync<TData, TContext>,
+  data: TData,
+  context: TContext,
+): Result<TData>;
+/**
+ * @overload
+ */
+export function runSyncWithContext<TData, TContext>(
+  validation: ValidationSync<TData, TContext>,
+  data: TData,
+  context: TContext,
+  options: NonBrandedOptions,
+): Result<TData>;
+/**
+ * @overload
+ */
+export function runSyncWithContext<
+  TData,
+  TContext,
+  TBrandName extends BrandName,
+>(
+  validation: ValidationSync<TData, TContext>,
+  data: TData,
+  context: TContext,
+  options: BrandedOptions<TBrandName>,
+): Result<TData & Brand<TBrandName>>;
 /**
  * Run synchronous validations with your any context.
  *
@@ -55,6 +87,29 @@ export function runSyncWithContext<TData, TContext>(
   return toResult(data, errors);
 }
 
+/**
+ * @overload
+ */
+export function runSync<TData>(
+  validation: ValidationSync<TData>,
+  data: TData,
+): Result<TData>;
+/**
+ * @overload
+ */
+export function runSync<TData>(
+  validation: ValidationSync<TData>,
+  data: TData,
+  options: NonBrandedOptions,
+): Result<TData>;
+/**
+ * @overload
+ */
+export function runSync<TData, TBrandName extends BrandName>(
+  validation: ValidationSync<TData>,
+  data: TData,
+  options: BrandedOptions<TBrandName>,
+): Result<TData & Brand<TBrandName>>;
 /**
  * Run synchronous validations.
  *

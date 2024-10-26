@@ -13,10 +13,7 @@ export type ValidationAsync<TData, TContext = unknown> = Array<
   | ChildAsync<TData, TContext>
 >;
 
-export type Options = {
-  /**
-   * If you set abortEarly to true, the runner immediately abort the validation after finding the first error.
-   */
+type Opts = {
   abortEarly?: boolean;
 };
 
@@ -25,7 +22,7 @@ export type ChildSync<TData, TContext> = {
   fn: (
     data: TData,
     context: TContext,
-    options: Options,
+    options: Opts,
   ) => Array<ErrorInfo<string>>;
 };
 
@@ -70,7 +67,7 @@ export function processSync<TData, TContext>(
   validation: ValidationSync<TData, TContext>,
   data: TData,
   context: TContext,
-  options: Options,
+  options: Opts,
 ): Array<ErrorInfo<string>> {
   const errors = [];
   for (const leaf of validation) {
@@ -105,7 +102,7 @@ export type ChildAsync<TData, TContext> = {
   fn: (
     data: TData,
     context: TContext,
-    options: Options,
+    options: Opts,
   ) => Promise<Array<ErrorInfo<string>>>;
 };
 
@@ -153,7 +150,7 @@ export async function processAsync<TData, TContext>(
   validation: ValidationAsync<TData, TContext>,
   data: TData,
   context: TContext,
-  options: Options,
+  options: Opts,
 ): Promise<Array<ErrorInfo<string>>> {
   const errors = [];
   for (const leaf of validation) {
