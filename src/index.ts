@@ -14,10 +14,16 @@ export type {
 export {
   childSync,
   childAsync,
-  runSync,
-  runAsync,
-  runSyncWithContext,
-  runAsyncWithContext,
 } from "./validation";
+
+export {
+  runSync,
+  runSyncWithContext,
+} from "./run-sync";
+
+export {
+  runAsync,
+  runAsyncWithContext,
+} from "./run-async";
 
 export type { ErrorInfo, Result } from "./result";
