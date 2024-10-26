@@ -5,7 +5,7 @@ export type CheckAsyncAll<TData, TContext> = CheckAsync<
   FnAsyncAll<TData, TContext>
 >;
 
-export type CheckAsync<TLabel, TFnAync> = {
+export type CheckAsync<TLabel extends string, TFnAync> = {
   type: "CheckAsync";
   fn: TFnAync;
   error: ErrorInfo<TLabel>;

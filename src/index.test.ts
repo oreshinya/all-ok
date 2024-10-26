@@ -53,7 +53,8 @@ suite("validation sync", () => {
 
   test("Success", () => {
     const result = aok.runSync(validation, { name: "tom", age: 2 });
-    assert.isOk(result.ok);
+    assert(result.ok);
+    assert.deepEqual(result.output, { name: "tom", age: 2 });
   });
 });
 
@@ -120,7 +121,8 @@ suite("validation sync with context", () => {
       { name: "tom", age: 2 },
       "100",
     );
-    assert.isOk(result.ok);
+    assert(result.ok);
+    assert.deepEqual(result.output, { name: "tom", age: 2 });
   });
 });
 
@@ -185,7 +187,8 @@ suite("validation async", () => {
 
   test("Success", async () => {
     const result = await aok.runAsync(validation, { name: "tom", age: 2 });
-    assert.isOk(result.ok);
+    assert(result.ok);
+    assert.deepEqual(result.output, { name: "tom", age: 2 });
   });
 });
 
@@ -259,7 +262,8 @@ suite("validation async with context", () => {
       { name: "tom", age: 2 },
       tx,
     );
-    assert.isOk(result.ok);
+    assert(result.ok);
+    assert.deepEqual(result.output, { name: "tom", age: 2 });
   });
 });
 

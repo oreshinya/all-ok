@@ -1,7 +1,6 @@
 import type { CheckAsyncAll } from "./check-async";
 import type { CheckSyncAll } from "./check-sync";
-import type { Result } from "./result";
-import { toResult } from "./result";
+import type { ErrorInfo } from "./result";
 
 export type ValidationSync<TData, TContext = unknown> = Array<
   CheckSyncAll<TData, TContext> | ChildSync<TData, TContext>
@@ -14,16 +13,17 @@ export type ValidationAsync<TData, TContext = unknown> = Array<
   | ChildAsync<TData, TContext>
 >;
 
-export type Options = {
-  /**
-   * If you set abortEarly to true, the runner immediately abort the validation after finding the first error.
-   */
+type Opts = {
   abortEarly?: boolean;
 };
 
 export type ChildSync<TData, TContext> = {
   type: "ChildSync";
-  fn: (data: TData, context: TContext, options: Options) => Result;
+  fn: (
+    data: TData,
+    context: TContext,
+    options: Opts,
+  ) => Array<ErrorInfo<string>>;
 };
 
 /**
@@ -58,59 +58,17 @@ export function childSync<TData, TChild, TContext>(
   return {
     type: "ChildSync",
     fn: (data, context, options) => {
-      return runSyncWithContext(validation, pick(data), context, options);
+      return processSync(validation, pick(data), context, options);
     },
   };
 }
 
-/**
- * Run synchronous validations with your any context.
- *
- * ```ts
- * import * as aok from 'all-ok';
- *
- * type Data = {
- *   name: string;
- *   age: number;
- * };
- *
- * const validation = [
- *   aok.childSync(
- *     (data: Data) => data.age,
- *     [
- *       aok.checkSync(
- *         (data: number, context: string) => String(data) !== context,
- *         "age",
- *         "It shouldn't equal to context.",
- *       ),
- *       aok.checkSync(
- *         (data: number) => data % 2 === 0,
- *         "age",
- *         "It should be even.",
- *       ),
- *       aok.checkSync((data: number) => data === 2, "age", "It should be 2."),
- *     ],
- *   ),
- *   aok.checkSync(
- *     (data: Data) => data.name !== "",
- *     "name",
- *     "It shouldn't be empty.",
- *   ),
- * ];
- *
- * aok.runSyncWithContext(
- *   validation,
- *   { name: "", age: 1 },
- *   "1",
- * );
- * ```
- */
-export function runSyncWithContext<TData, TContext>(
+export function processSync<TData, TContext>(
   validation: ValidationSync<TData, TContext>,
   data: TData,
   context: TContext,
-  options: Options = {},
-): Result {
+  options: Opts,
+): Array<ErrorInfo<string>> {
   const errors = [];
   for (const leaf of validation) {
     switch (leaf.type) {
@@ -119,73 +77,33 @@ export function runSyncWithContext<TData, TContext>(
         if (!result) {
           errors.push(leaf.error);
           if (options.abortEarly) {
-            return toResult(errors);
+            return errors;
           }
         }
         break;
       }
       default: {
-        const result = leaf.fn(data, context, options);
-        if (!result.ok) {
-          errors.push(...result.errors);
+        const leafErrors = leaf.fn(data, context, options);
+        if (leafErrors.length > 0) {
+          errors.push(...leafErrors);
           if (options.abortEarly) {
-            return toResult(errors);
+            return errors;
           }
         }
         break;
       }
     }
   }
-  return toResult(errors);
-}
-
-/**
- * Run synchronous validations.
- *
- * ```ts
- * import * as aok from 'all-ok';
- *
- * type Data = {
- *   name: string;
- *   age: number;
- * };
- *
- * const validation = [
- *   aok.childSync(
- *     (data: Data) => data.age,
- *     [
- *       aok.checkSync(
- *         (data: number) => data % 2 === 0,
- *         "age",
- *         "It should be even.",
- *       ),
- *       aok.checkSync((data: number) => data === 2, "age", "It should be 2."),
- *     ],
- *   ),
- *   aok.checkSync(
- *     (data: Data) => data.name !== "",
- *     "name",
- *     "It shouldn't be empty.",
- *   ),
- * ];
- *
- * aok.runSync(
- *   validation,
- *   { name: "", age: 1 }
- * );
- * ```
- */
-export function runSync<TData>(
-  validation: ValidationSync<TData>,
-  data: TData,
-  options: Options = {},
-): Result {
-  return runSyncWithContext(validation, data, undefined, options);
+  return errors;
 }
 
 export type ChildAsync<TData, TContext> = {
   type: "ChildAsync";
-  fn: (data: TData, context: TContext, options: Options) => Promise<Result>;
+  fn: (
+    data: TData,
+    context: TContext,
+    options: Opts,
+  ) => Promise<Array<ErrorInfo<string>>>;
 };
 
 /**
@@ -223,65 +141,17 @@ export function childAsync<TData, TChild, TContext>(
   return {
     type: "ChildAsync",
     fn: (data, context, options) => {
-      return runAsyncWithContext(validation, pick(data), context, options);
+      return processAsync(validation, pick(data), context, options);
     },
   };
 }
 
-/**
- * Run asynchronous validations with your any context.
- *
- * ```ts
- * import * as aok from 'all-ok';
- * import { type Tx, db } from "~/db";
- *
- * type Data = {
- *   name: string;
- *   age: number;
- * };
- *
- * const validation = [
- *   aok.childAsync(
- *     (data: Data) => data.age,
- *     [
- *       aok.checkAsync(
- *         async (data: number, context: Tx) => {
- *           const remoteNumber = await context.find();
- *           return data === remoteNumber;
- *         },
- *         "age",
- *         "It should be equal to db number.",
- *       ),
- *       aok.checkSync(
- *         (data: number) => data % 2 === 0,
- *         "age",
- *         "It should be even.",
- *       ),
- *       aok.checkSync((data: number) => data === 2, "age", "It should be 2."),
- *     ],
- *   ),
- *   aok.checkSync(
- *     (data: Data) => data.name !== "",
- *     "name",
- *     "It shouldn't be empty.",
- *   ),
- * ];
- *
- * await db.transaction(async (tx) => {
- *   await aok.runAsyncWithContext(
- *     validation,
- *     { name: "", age: 1 },
- *     tx,
- *   );
- * });
- * ```
- */
-export async function runAsyncWithContext<TData, TContext>(
+export async function processAsync<TData, TContext>(
   validation: ValidationAsync<TData, TContext>,
   data: TData,
   context: TContext,
-  options: Options = {},
-): Promise<Result> {
+  options: Opts,
+): Promise<Array<ErrorInfo<string>>> {
   const errors = [];
   for (const leaf of validation) {
     switch (leaf.type) {
@@ -290,17 +160,17 @@ export async function runAsyncWithContext<TData, TContext>(
         if (!result) {
           errors.push(leaf.error);
           if (options.abortEarly) {
-            return toResult(errors);
+            return errors;
           }
         }
         break;
       }
       case "ChildAsync": {
-        const result = await leaf.fn(data, context, options);
-        if (!result.ok) {
-          errors.push(...result.errors);
+        const leafErrors = await leaf.fn(data, context, options);
+        if (leafErrors.length > 0) {
+          errors.push(...leafErrors);
           if (options.abortEarly) {
-            return toResult(errors);
+            return errors;
           }
         }
         break;
@@ -310,74 +180,22 @@ export async function runAsyncWithContext<TData, TContext>(
         if (!result) {
           errors.push(leaf.error);
           if (options.abortEarly) {
-            return toResult(errors);
+            return errors;
           }
         }
         break;
       }
       default: {
-        const result = leaf.fn(data, context, options);
-        if (!result.ok) {
-          errors.push(...result.errors);
+        const leafErrors = leaf.fn(data, context, options);
+        if (leafErrors.length > 0) {
+          errors.push(...leafErrors);
           if (options.abortEarly) {
-            return toResult(errors);
+            return errors;
           }
         }
         break;
       }
     }
   }
-  return toResult(errors);
-}
-
-/**
- * Run asynchronous validations.
- *
- * ```ts
- * import * as aok from 'all-ok';
- *
- * type Data = {
- *   name: string;
- *   age: number;
- * };
- *
- * const validation = [
- *   aok.childAsync(
- *     (data: Data) => data.age,
- *     [
- *       aok.checkAsync(
- *         async (data: number) => {
- *           const remoteNumber = await Promise.resolve(2);
- *           return data === remoteNumber;
- *         },
- *         "age",
- *         "It should be equal to remote number.",
- *       ),
- *       aok.checkSync(
- *         (data: number) => data % 2 === 0,
- *         "age",
- *         "It should be even.",
- *       ),
- *       aok.checkSync((data: number) => data === 2, "age", "It should be 2."),
- *     ],
- *   ),
- *   aok.checkSync(
- *     (data: Data) => data.name !== "",
- *     "name",
- *     "It shouldn't be empty.",
- *   ),
- * ];
- *
- * await aok.runAsync(
- *   validation,
- *   { name: "", age: 1 }
- * );
- * ```
- */
-export async function runAsync<TData>(
-  validation: ValidationAsync<TData>,
-  data: TData,
-  options: Options = {},
-): Promise<Result> {
-  return runAsyncWithContext(validation, data, undefined, options);
+  return errors;
 }

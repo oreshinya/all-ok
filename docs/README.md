@@ -1,8 +1,8 @@
-**all-ok v0.1.1** • **Docs**
+**all-ok v0.2.0** • **Docs**
 
 ***
 
-# all-ok v0.1.1
+# all-ok v0.2.0
 
 ## Modules
 
@@ -14,6 +14,8 @@
 
 | Type alias | Description |
 | ------ | ------ |
+| [Brand](type-aliases/Brand.md) | - |
+| [BrandName](type-aliases/BrandName.md) | - |
 | [CheckAsync](type-aliases/CheckAsync.md) | - |
 | [CheckSync](type-aliases/CheckSync.md) | - |
 | [ChildAsync](type-aliases/ChildAsync.md) | - |
@@ -23,6 +25,12 @@
 | [Result](type-aliases/Result.md) | - |
 | [ValidationAsync](type-aliases/ValidationAsync.md) | - |
 | [ValidationSync](type-aliases/ValidationSync.md) | - |
+
+## Variables
+
+| Variable | Description |
+| ------ | ------ |
+| [BrandKey](variables/BrandKey.md) | - |
 
 ## Functions
 

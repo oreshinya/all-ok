@@ -1,4 +1,4 @@
-[**all-ok v0.1.1**](../README.md) • **Docs**
+[**all-ok v0.2.0**](../README.md) • **Docs**
 
 ***
 
@@ -10,6 +10,7 @@
 
 | Type alias | Description |
 | ------ | ------ |
+| [BrandedOptions](type-aliases/BrandedOptions.md) | - |
 | [CheckAsyncAll](type-aliases/CheckAsyncAll.md) | - |
 | [CheckSyncAll](type-aliases/CheckSyncAll.md) | - |
 | [FnAsync](type-aliases/FnAsync.md) | - |
@@ -18,3 +19,5 @@
 | [FnSync](type-aliases/FnSync.md) | - |
 | [FnSyncAll](type-aliases/FnSyncAll.md) | - |
 | [FnSyncWithContext](type-aliases/FnSyncWithContext.md) | - |
+| [NonBrandedOptions](type-aliases/NonBrandedOptions.md) | - |
+| [Opts](type-aliases/Opts.md) | - |

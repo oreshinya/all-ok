@@ -1,4 +1,4 @@
-[**all-ok v0.1.1**](../README.md) • **Docs**
+[**all-ok v0.2.0**](../README.md) • **Docs**
 
 ***
 
@@ -10,7 +10,7 @@
 
 | Type Parameter |
 | ------ |
-| `TLabel` |
+| `TLabel` *extends* `string` |
 
 ## Type declaration
 
