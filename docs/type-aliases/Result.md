@@ -1,7 +1,13 @@
-[**all-ok v0.1.1**](../README.md) • **Docs**
+[**all-ok v0.2.0**](../README.md) • **Docs**
 
 ***
 
-# Type Alias: Result
+# Type Alias: Result\<TOutput\>
 
-> **Result**: \{`ok`: `true`; \} \| \{`errors`: [`ErrorInfo`](ErrorInfo.md)\<`string`\>[];`ok`: `false`; \}
+> **Result**\<`TOutput`\>: \{`ok`: `true`;`output`: `TOutput`; \} \| \{`errors`: [[`ErrorInfo`](ErrorInfo.md)\<`string`\>, `...ErrorInfo<string>[]`];`ok`: `false`; \}
+
+## Type Parameters
+
+| Type Parameter |
+| ------ |
+| `TOutput` |

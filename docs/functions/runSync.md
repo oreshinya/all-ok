@@ -1,10 +1,8 @@
-[**all-ok v0.1.1**](../README.md) • **Docs**
+[**all-ok v0.2.0**](../README.md) • **Docs**
 
 ***
 
 # Function: runSync()
-
-> **runSync**\<`TData`\>(`validation`: [`ValidationSync`](../type-aliases/ValidationSync.md)\<`TData`, `unknown`\>, `data`: `TData`, `options`: [`Options`](../type-aliases/Options.md)): [`Result`](../type-aliases/Result.md)
 
 Run synchronous validations.
 
@@ -41,20 +39,68 @@ aok.runSync(
 );
 ```
 
-## Type Parameters
+## runSync(validation, data)
+
+> **runSync**\<`TData`\>(`validation`: [`ValidationSync`](../type-aliases/ValidationSync.md)\<`TData`\>, `data`: `TData`): [`Result`](../type-aliases/Result.md)\<`TData`\>
+
+### Type Parameters
 
 | Type Parameter |
 | ------ |
 | `TData` |
 
-## Parameters
+### Parameters
 
 | Parameter | Type |
 | ------ | ------ |
-| `validation` | [`ValidationSync`](../type-aliases/ValidationSync.md)\<`TData`, `unknown`\> |
+| `validation` | [`ValidationSync`](../type-aliases/ValidationSync.md)\<`TData`\> |
 | `data` | `TData` |
-| `options` | [`Options`](../type-aliases/Options.md) |
 
-## Returns
+### Returns
 
-[`Result`](../type-aliases/Result.md)
+[`Result`](../type-aliases/Result.md)\<`TData`\>
+
+## runSync(validation, data, options)
+
+> **runSync**\<`TData`\>(`validation`: [`ValidationSync`](../type-aliases/ValidationSync.md)\<`TData`\>, `data`: `TData`, `options`: [`NonBrandedOptions`](../-internal-/type-aliases/NonBrandedOptions.md)): [`Result`](../type-aliases/Result.md)\<`TData`\>
+
+### Type Parameters
+
+| Type Parameter |
+| ------ |
+| `TData` |
+
+### Parameters
+
+| Parameter | Type |
+| ------ | ------ |
+| `validation` | [`ValidationSync`](../type-aliases/ValidationSync.md)\<`TData`\> |
+| `data` | `TData` |
+| `options` | [`NonBrandedOptions`](../-internal-/type-aliases/NonBrandedOptions.md) |
+
+### Returns
+
+[`Result`](../type-aliases/Result.md)\<`TData`\>
+
+## runSync(validation, data, options)
+
+> **runSync**\<`TData`, `TBrandName`\>(`validation`: [`ValidationSync`](../type-aliases/ValidationSync.md)\<`TData`\>, `data`: `TData`, `options`: [`BrandedOptions`](../-internal-/type-aliases/BrandedOptions.md)\<`TBrandName`\>): [`Result`](../type-aliases/Result.md)\<`TData` & [`Brand`](../type-aliases/Brand.md)\<`TBrandName`\>\>
+
+### Type Parameters
+
+| Type Parameter |
+| ------ |
+| `TData` |
+| `TBrandName` *extends* [`BrandName`](../type-aliases/BrandName.md) |
+
+### Parameters
+
+| Parameter | Type |
+| ------ | ------ |
+| `validation` | [`ValidationSync`](../type-aliases/ValidationSync.md)\<`TData`\> |
+| `data` | `TData` |
+| `options` | [`BrandedOptions`](../-internal-/type-aliases/BrandedOptions.md)\<`TBrandName`\> |
+
+### Returns
+
+[`Result`](../type-aliases/Result.md)\<`TData` & [`Brand`](../type-aliases/Brand.md)\<`TBrandName`\>\>

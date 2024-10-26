@@ -1,10 +1,8 @@
-[**all-ok v0.1.1**](../README.md) • **Docs**
+[**all-ok v0.2.0**](../README.md) • **Docs**
 
 ***
 
 # Function: runAsync()
-
-> **runAsync**\<`TData`\>(`validation`: [`ValidationAsync`](../type-aliases/ValidationAsync.md)\<`TData`, `unknown`\>, `data`: `TData`, `options`: [`Options`](../type-aliases/Options.md)): `Promise`\<[`Result`](../type-aliases/Result.md)\>
 
 Run asynchronous validations.
 
@@ -49,20 +47,68 @@ await aok.runAsync(
 );
 ```
 
-## Type Parameters
+## runAsync(validation, data)
+
+> **runAsync**\<`TData`\>(`validation`: [`ValidationAsync`](../type-aliases/ValidationAsync.md)\<`TData`\>, `data`: `TData`): `Promise`\<[`Result`](../type-aliases/Result.md)\<`TData`\>\>
+
+### Type Parameters
 
 | Type Parameter |
 | ------ |
 | `TData` |
 
-## Parameters
+### Parameters
 
 | Parameter | Type |
 | ------ | ------ |
-| `validation` | [`ValidationAsync`](../type-aliases/ValidationAsync.md)\<`TData`, `unknown`\> |
+| `validation` | [`ValidationAsync`](../type-aliases/ValidationAsync.md)\<`TData`\> |
 | `data` | `TData` |
-| `options` | [`Options`](../type-aliases/Options.md) |
 
-## Returns
+### Returns
 
-`Promise`\<[`Result`](../type-aliases/Result.md)\>
+`Promise`\<[`Result`](../type-aliases/Result.md)\<`TData`\>\>
+
+## runAsync(validation, data, options)
+
+> **runAsync**\<`TData`\>(`validation`: [`ValidationAsync`](../type-aliases/ValidationAsync.md)\<`TData`\>, `data`: `TData`, `options`: [`NonBrandedOptions`](../-internal-/type-aliases/NonBrandedOptions.md)): `Promise`\<[`Result`](../type-aliases/Result.md)\<`TData`\>\>
+
+### Type Parameters
+
+| Type Parameter |
+| ------ |
+| `TData` |
+
+### Parameters
+
+| Parameter | Type |
+| ------ | ------ |
+| `validation` | [`ValidationAsync`](../type-aliases/ValidationAsync.md)\<`TData`\> |
+| `data` | `TData` |
+| `options` | [`NonBrandedOptions`](../-internal-/type-aliases/NonBrandedOptions.md) |
+
+### Returns
+
+`Promise`\<[`Result`](../type-aliases/Result.md)\<`TData`\>\>
+
+## runAsync(validation, data, options)
+
+> **runAsync**\<`TData`, `TBrandName`\>(`validation`: [`ValidationAsync`](../type-aliases/ValidationAsync.md)\<`TData`\>, `data`: `TData`, `options`: [`BrandedOptions`](../-internal-/type-aliases/BrandedOptions.md)\<`TBrandName`\>): `Promise`\<[`Result`](../type-aliases/Result.md)\<`TData` & [`Brand`](../type-aliases/Brand.md)\<`TBrandName`\>\>\>
+
+### Type Parameters
+
+| Type Parameter |
+| ------ |
+| `TData` |
+| `TBrandName` *extends* [`BrandName`](../type-aliases/BrandName.md) |
+
+### Parameters
+
+| Parameter | Type |
+| ------ | ------ |
+| `validation` | [`ValidationAsync`](../type-aliases/ValidationAsync.md)\<`TData`\> |
+| `data` | `TData` |
+| `options` | [`BrandedOptions`](../-internal-/type-aliases/BrandedOptions.md)\<`TBrandName`\> |
+
+### Returns
+
+`Promise`\<[`Result`](../type-aliases/Result.md)\<`TData` & [`Brand`](../type-aliases/Brand.md)\<`TBrandName`\>\>\>
