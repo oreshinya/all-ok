@@ -56,9 +56,9 @@ export async function runAsyncWithContext<TData, TContext>(
   data: TData,
   context: TContext,
   options: Options = {},
-): Promise<Result> {
+): Promise<Result<TData>> {
   const errors = await processAsync(validation, data, context, options);
-  return toResult(errors);
+  return toResult(data, errors);
 }
 
 /**
@@ -109,6 +109,6 @@ export async function runAsync<TData>(
   validation: ValidationAsync<TData>,
   data: TData,
   options: Options = {},
-): Promise<Result> {
+): Promise<Result<TData>> {
   return runAsyncWithContext(validation, data, undefined, options);
 }

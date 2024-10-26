@@ -50,9 +50,9 @@ export function runSyncWithContext<TData, TContext>(
   data: TData,
   context: TContext,
   options: Options = {},
-): Result {
+): Result<TData> {
   const errors = processSync(validation, data, context, options);
-  return toResult(errors);
+  return toResult(data, errors);
 }
 
 /**
@@ -95,6 +95,6 @@ export function runSync<TData>(
   validation: ValidationSync<TData>,
   data: TData,
   options: Options = {},
-): Result {
+): Result<TData> {
   return runSyncWithContext(validation, data, undefined, options);
 }
