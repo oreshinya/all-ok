@@ -54,7 +54,11 @@ suite("validation sync", () => {
   test("Success", () => {
     const result = aok.runSync(validation, { name: "tom", age: 2 });
     assert(result.ok);
-    assert.deepEqual(result.output, { name: "tom", age: 2 });
+    assert.deepEqual(result.data, { name: "tom", age: 2 });
+    assert.deepEqual(result.brand("validated"), {
+      name: "tom",
+      age: 2,
+    } as Data & aok.Brand<"validated">);
   });
 });
 
@@ -122,7 +126,11 @@ suite("validation sync with context", () => {
       "100",
     );
     assert(result.ok);
-    assert.deepEqual(result.output, { name: "tom", age: 2 });
+    assert.deepEqual(result.data, { name: "tom", age: 2 });
+    assert.deepEqual(result.brand("validated"), {
+      name: "tom",
+      age: 2,
+    } as Data & aok.Brand<"validated">);
   });
 });
 
@@ -188,7 +196,11 @@ suite("validation async", () => {
   test("Success", async () => {
     const result = await aok.runAsync(validation, { name: "tom", age: 2 });
     assert(result.ok);
-    assert.deepEqual(result.output, { name: "tom", age: 2 });
+    assert.deepEqual(result.data, { name: "tom", age: 2 });
+    assert.deepEqual(result.brand("validated"), {
+      name: "tom",
+      age: 2,
+    } as Data & aok.Brand<"validated">);
   });
 });
 
@@ -263,7 +275,11 @@ suite("validation async with context", () => {
       tx,
     );
     assert(result.ok);
-    assert.deepEqual(result.output, { name: "tom", age: 2 });
+    assert.deepEqual(result.data, { name: "tom", age: 2 });
+    assert.deepEqual(result.brand("validated"), {
+      name: "tom",
+      age: 2,
+    } as Data & aok.Brand<"validated">);
   });
 });
 

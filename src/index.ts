@@ -26,4 +26,4 @@ export {
   runAsyncWithContext,
 } from "./run-async";
 
-export type { ErrorInfo, Result } from "./result";
+export type { Brand, BrandKey, BrandName, ErrorInfo, Result } from "./result";
