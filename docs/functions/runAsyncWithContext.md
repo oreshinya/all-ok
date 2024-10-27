@@ -1,10 +1,10 @@
-[**all-ok v0.1.1**](../README.md) • **Docs**
+[**all-ok v0.2.0**](../README.md) • **Docs**
 
 ***
 
 # Function: runAsyncWithContext()
 
-> **runAsyncWithContext**\<`TData`, `TContext`\>(`validation`: [`ValidationAsync`](../type-aliases/ValidationAsync.md)\<`TData`, `TContext`\>, `data`: `TData`, `context`: `TContext`, `options`: [`Options`](../type-aliases/Options.md)): `Promise`\<[`Result`](../type-aliases/Result.md)\>
+> **runAsyncWithContext**\<`TData`, `TContext`\>(`validation`: [`ValidationAsync`](../type-aliases/ValidationAsync.md)\<`TData`, `TContext`\>, `data`: `TData`, `context`: `TContext`, `options`: [`Options`](../type-aliases/Options.md)): `Promise`\<[`Result`](../type-aliases/Result.md)\<`TData`\>\>
 
 Run asynchronous validations with your any context.
 
@@ -71,4 +71,4 @@ await db.transaction(async (tx) => {
 
 ## Returns
 
-`Promise`\<[`Result`](../type-aliases/Result.md)\>
+`Promise`\<[`Result`](../type-aliases/Result.md)\<`TData`\>\>

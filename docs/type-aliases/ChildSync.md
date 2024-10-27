@@ -1,10 +1,10 @@
-[**all-ok v0.1.1**](../README.md) • **Docs**
+[**all-ok v0.2.0**](../README.md) • **Docs**
 
 ***
 
 # Type Alias: ChildSync\<TData, TContext\>
 
-> **ChildSync**\<`TData`, `TContext`\>: \{`fn`: (`data`: `TData`, `context`: `TContext`, `options`: [`Options`](Options.md)) => [`Result`](Result.md);`type`: `"ChildSync"`; \}
+> **ChildSync**\<`TData`, `TContext`\>: \{`fn`: (`data`: `TData`, `context`: `TContext`, `options`: [`Options`](Options.md)) => [`ErrorInfo`](ErrorInfo.md)\<`string`\>[];`type`: `"ChildSync"`; \}
 
 ## Type Parameters
 
@@ -17,5 +17,5 @@
 
 | Name | Type |
 | ------ | ------ |
-| `fn` | (`data`: `TData`, `context`: `TContext`, `options`: [`Options`](Options.md)) => [`Result`](Result.md) |
+| `fn` | (`data`: `TData`, `context`: `TContext`, `options`: [`Options`](Options.md)) => [`ErrorInfo`](ErrorInfo.md)\<`string`\>[] |
 | `type` | `"ChildSync"` |

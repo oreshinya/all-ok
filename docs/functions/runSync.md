@@ -1,10 +1,10 @@
-[**all-ok v0.1.1**](../README.md) • **Docs**
+[**all-ok v0.2.0**](../README.md) • **Docs**
 
 ***
 
 # Function: runSync()
 
-> **runSync**\<`TData`\>(`validation`: [`ValidationSync`](../type-aliases/ValidationSync.md)\<`TData`, `unknown`\>, `data`: `TData`, `options`: [`Options`](../type-aliases/Options.md)): [`Result`](../type-aliases/Result.md)
+> **runSync**\<`TData`\>(`validation`: [`ValidationSync`](../type-aliases/ValidationSync.md)\<`TData`\>, `data`: `TData`, `options`: [`Options`](../type-aliases/Options.md)): [`Result`](../type-aliases/Result.md)\<`TData`\>
 
 Run synchronous validations.
 
@@ -51,10 +51,10 @@ aok.runSync(
 
 | Parameter | Type |
 | ------ | ------ |
-| `validation` | [`ValidationSync`](../type-aliases/ValidationSync.md)\<`TData`, `unknown`\> |
+| `validation` | [`ValidationSync`](../type-aliases/ValidationSync.md)\<`TData`\> |
 | `data` | `TData` |
 | `options` | [`Options`](../type-aliases/Options.md) |
 
 ## Returns
 
-[`Result`](../type-aliases/Result.md)
+[`Result`](../type-aliases/Result.md)\<`TData`\>

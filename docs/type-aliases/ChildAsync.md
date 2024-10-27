@@ -1,10 +1,10 @@
-[**all-ok v0.1.1**](../README.md) • **Docs**
+[**all-ok v0.2.0**](../README.md) • **Docs**
 
 ***
 
 # Type Alias: ChildAsync\<TData, TContext\>
 
-> **ChildAsync**\<`TData`, `TContext`\>: \{`fn`: (`data`: `TData`, `context`: `TContext`, `options`: [`Options`](Options.md)) => `Promise`\<[`Result`](Result.md)\>;`type`: `"ChildAsync"`; \}
+> **ChildAsync**\<`TData`, `TContext`\>: \{`fn`: (`data`: `TData`, `context`: `TContext`, `options`: [`Options`](Options.md)) => `Promise`\<[`ErrorInfo`](ErrorInfo.md)\<`string`\>[]\>;`type`: `"ChildAsync"`; \}
 
 ## Type Parameters
 
@@ -17,5 +17,5 @@
 
 | Name | Type |
 | ------ | ------ |
-| `fn` | (`data`: `TData`, `context`: `TContext`, `options`: [`Options`](Options.md)) => `Promise`\<[`Result`](Result.md)\> |
+| `fn` | (`data`: `TData`, `context`: `TContext`, `options`: [`Options`](Options.md)) => `Promise`\<[`ErrorInfo`](ErrorInfo.md)\<`string`\>[]\> |
 | `type` | `"ChildAsync"` |
