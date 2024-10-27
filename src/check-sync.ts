@@ -5,7 +5,7 @@ export type CheckSyncAll<TData, TContext> = CheckSync<
   FnSyncAll<TData, TContext>
 >;
 
-export type CheckSync<TLabel, TFnSync> = {
+export type CheckSync<TLabel extends string, TFnSync> = {
   type: "CheckSync";
   fn: TFnSync;
   error: ErrorInfo<TLabel>;

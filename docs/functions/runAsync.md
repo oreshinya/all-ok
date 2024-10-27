@@ -1,10 +1,10 @@
-[**all-ok v0.1.1**](../README.md) • **Docs**
+[**all-ok v0.2.0**](../README.md) • **Docs**
 
 ***
 
 # Function: runAsync()
 
-> **runAsync**\<`TData`\>(`validation`: [`ValidationAsync`](../type-aliases/ValidationAsync.md)\<`TData`, `unknown`\>, `data`: `TData`, `options`: [`Options`](../type-aliases/Options.md)): `Promise`\<[`Result`](../type-aliases/Result.md)\>
+> **runAsync**\<`TData`\>(`validation`: [`ValidationAsync`](../type-aliases/ValidationAsync.md)\<`TData`\>, `data`: `TData`, `options`: [`Options`](../type-aliases/Options.md)): `Promise`\<[`Result`](../type-aliases/Result.md)\<`TData`\>\>
 
 Run asynchronous validations.
 
@@ -59,10 +59,10 @@ await aok.runAsync(
 
 | Parameter | Type |
 | ------ | ------ |
-| `validation` | [`ValidationAsync`](../type-aliases/ValidationAsync.md)\<`TData`, `unknown`\> |
+| `validation` | [`ValidationAsync`](../type-aliases/ValidationAsync.md)\<`TData`\> |
 | `data` | `TData` |
 | `options` | [`Options`](../type-aliases/Options.md) |
 
 ## Returns
 
-`Promise`\<[`Result`](../type-aliases/Result.md)\>
+`Promise`\<[`Result`](../type-aliases/Result.md)\<`TData`\>\>

@@ -1,7 +1,15 @@
-[**all-ok v0.1.1**](../README.md) • **Docs**
+[**all-ok v0.2.0**](../README.md) • **Docs**
 
 ***
 
-# Type Alias: Result
+# Type Alias: Result\<TData\>
 
-> **Result**: \{`ok`: `true`; \} \| \{`errors`: [`ErrorInfo`](ErrorInfo.md)\<`string`\>[];`ok`: `false`; \}
+> **Result**\<`TData`\>: \{`brand`: \<`TBrandName`\>(`brand`: `TBrandName`) => `TData` & [`Brand`](Brand.md)\<`TBrandName`\>;`data`: `TData`;`ok`: `true`; \} \| \{`errors`: [[`ErrorInfo`](ErrorInfo.md)\<`string`\>, `...ErrorInfo<string>[]`];`ok`: `false`; \}
+
+Validation result type.
+
+## Type Parameters
+
+| Type Parameter |
+| ------ |
+| `TData` |

@@ -1,10 +1,10 @@
-[**all-ok v0.1.1**](../README.md) • **Docs**
+[**all-ok v0.2.0**](../README.md) • **Docs**
 
 ***
 
 # Function: runSyncWithContext()
 
-> **runSyncWithContext**\<`TData`, `TContext`\>(`validation`: [`ValidationSync`](../type-aliases/ValidationSync.md)\<`TData`, `TContext`\>, `data`: `TData`, `context`: `TContext`, `options`: [`Options`](../type-aliases/Options.md)): [`Result`](../type-aliases/Result.md)
+> **runSyncWithContext**\<`TData`, `TContext`\>(`validation`: [`ValidationSync`](../type-aliases/ValidationSync.md)\<`TData`, `TContext`\>, `data`: `TData`, `context`: `TContext`, `options`: [`Options`](../type-aliases/Options.md)): [`Result`](../type-aliases/Result.md)\<`TData`\>
 
 Run synchronous validations with your any context.
 
@@ -65,4 +65,4 @@ aok.runSyncWithContext(
 
 ## Returns
 
-[`Result`](../type-aliases/Result.md)
+[`Result`](../type-aliases/Result.md)\<`TData`\>
