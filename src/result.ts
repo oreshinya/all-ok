@@ -1,4 +1,7 @@
-export type ErrorInfo<TLabel> = { label: TLabel; message: string };
+export type ErrorInfo<TLabel extends string> = {
+  label: TLabel;
+  message: string;
+};
 
 export type Result<TOutput> =
   | {
