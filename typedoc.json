@@ -6,7 +6,6 @@
   "entryPoints": ["src/index.ts"],
   "disableSources": true,
   "readme": "none",
-  "includeVersion": true,
   "hideBreadcrumbs": true,
   "expandObjects": true,
   "expandParameters": true,
