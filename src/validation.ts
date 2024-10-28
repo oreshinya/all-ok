@@ -55,13 +55,15 @@ export type ChildSync<TData, TContext> = {
  * ```
  */
 export function childSync<TData, TChild, TContext>(
-  pick: (data: TData) => TChild,
+  pick:
+    | ((data: TData) => TChild)
+    | ((data: TData, context: TContext) => TChild),
   validation: ValidationSync<TChild, TContext>,
 ): ChildSync<TData, TContext> {
   return {
     type: "ChildSync",
     fn: (data, context, options) => {
-      return processSync(validation, pick(data), context, options);
+      return processSync(validation, pick(data, context), context, options);
     },
   };
 }
@@ -138,13 +140,15 @@ export type ChildAsync<TData, TContext> = {
  * ```
  */
 export function childAsync<TData, TChild, TContext>(
-  pick: (data: TData) => TChild,
+  pick:
+    | ((data: TData) => TChild)
+    | ((data: TData, context: TContext) => TChild),
   validation: ValidationAsync<TChild, TContext>,
 ): ChildAsync<TData, TContext> {
   return {
     type: "ChildAsync",
     fn: (data, context, options) => {
-      return processAsync(validation, pick(data), context, options);
+      return processAsync(validation, pick(data, context), context, options);
     },
   };
 }
