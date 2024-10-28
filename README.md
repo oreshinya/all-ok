@@ -59,7 +59,7 @@ const checkNameUniq = aok.checkAsync(
 
 const userValidation = [
   checkUser,
-  aok.childAsync(
+  aok.mapAsync(
     (user: User) => user.name,
     [
       checkNameLength,
