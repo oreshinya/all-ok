@@ -16,7 +16,7 @@ import { processAsync } from "./validation";
  * };
  *
  * const validation = [
- *   aok.childAsync(
+ *   aok.mapAsync(
  *     (data: Data) => data.age,
  *     [
  *       aok.checkAsync(
@@ -73,7 +73,7 @@ export async function runAsyncWithContext<TData, TContext>(
  * };
  *
  * const validation = [
- *   aok.childAsync(
+ *   aok.mapAsync(
  *     (data: Data) => data.age,
  *     [
  *       aok.checkAsync(

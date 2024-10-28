@@ -15,7 +15,7 @@ import { processSync } from "./validation";
  * };
  *
  * const validation = [
- *   aok.childSync(
+ *   aok.mapSync(
  *     (data: Data) => data.age,
  *     [
  *       aok.checkSync(
@@ -67,7 +67,7 @@ export function runSyncWithContext<TData, TContext>(
  * };
  *
  * const validation = [
- *   aok.childSync(
+ *   aok.mapSync(
  *     (data: Data) => data.age,
  *     [
  *       aok.checkSync(

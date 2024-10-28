@@ -1,4 +1,4 @@
-[**all-ok v0.2.0**](../README.md) • **Docs**
+[**all-ok v0.3.0**](../README.md) • **Docs**
 
 ***
 
@@ -17,7 +17,7 @@ type Data = {
 };
 
 const validation = [
-  aok.childAsync(
+  aok.mapAsync(
     (data: Data) => data.age,
     [
       aok.checkAsync(

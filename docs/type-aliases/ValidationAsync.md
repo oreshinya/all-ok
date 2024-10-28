@@ -1,10 +1,10 @@
-[**all-ok v0.2.0**](../README.md) • **Docs**
+[**all-ok v0.3.0**](../README.md) • **Docs**
 
 ***
 
 # Type Alias: ValidationAsync\<TData, TContext\>
 
-> **ValidationAsync**\<`TData`, `TContext`\>: ([`CheckSyncAll`](../-internal-/type-aliases/CheckSyncAll.md)\<`TData`, `TContext`\> \| [`CheckAsyncAll`](../-internal-/type-aliases/CheckAsyncAll.md)\<`TData`, `TContext`\> \| [`ChildSync`](ChildSync.md)\<`TData`, `TContext`\> \| [`ChildAsync`](ChildAsync.md)\<`TData`, `TContext`\>)[]
+> **ValidationAsync**\<`TData`, `TContext`\>: ([`CheckSyncAll`](../-internal-/type-aliases/CheckSyncAll.md)\<`TData`, `TContext`\> \| [`CheckAsyncAll`](../-internal-/type-aliases/CheckAsyncAll.md)\<`TData`, `TContext`\> \| [`MapSync`](MapSync.md)\<`TData`, `TContext`\> \| [`MapAsync`](MapAsync.md)\<`TData`, `TContext`\>)[]
 
 ## Type Parameters
 
