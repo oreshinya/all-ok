@@ -1,8 +1,8 @@
-**all-ok v0.3.0** • **Docs**
+**all-ok** • **Docs**
 
 ***
 
-# all-ok v0.3.0
+# all-ok
 
 ## Modules
 
