@@ -80,6 +80,16 @@ suite("validation sync with context", () => {
         aok.checkSync((data: number) => data === 2, "age", "It should be 2."),
       ],
     ),
+    aok.mapSync(
+      (data: Data, context: string) => `${data.name} ${context}`,
+      [
+        aok.checkSync(
+          (data: string) => data === "tom 100",
+          "name",
+          "It should be 'name 100'",
+        ),
+      ],
+    ),
     aok.checkSync(
       (data: Data) => data.name !== "",
       "name",
@@ -99,6 +109,7 @@ suite("validation sync with context", () => {
         { label: "age", message: "It shouldn't equal to context." },
         { label: "age", message: "It should be even." },
         { label: "age", message: "It should be 2." },
+        { label: "name", message: "It should be 'name 100'" },
         { label: "name", message: "It shouldn't be empty." },
       ]);
     });
@@ -209,13 +220,15 @@ suite("validation async with context", () => {
     find: async () => Promise.resolve(2),
   };
 
+  type Context = { tx: typeof tx; numStr: string };
+
   const validation = [
     aok.mapAsync(
       (data: Data) => data.age,
       [
         aok.checkAsync(
-          async (data: number, context: typeof tx) => {
-            const remoteNumber = await context.find();
+          async (data: number, context: Context) => {
+            const remoteNumber = await context.tx.find();
             return data === remoteNumber;
           },
           "age",
@@ -227,6 +240,19 @@ suite("validation async with context", () => {
           "It should be even.",
         ),
         aok.checkSync((data: number) => data === 2, "age", "It should be 2."),
+      ],
+    ),
+    aok.mapAsync(
+      (data: Data, context: Context) => `${data.name} ${context.numStr}`,
+      [
+        aok.checkAsync(
+          async (data: string) => {
+            const remoteStr = await Promise.resolve("tom 100");
+            return data === remoteStr;
+          },
+          "name",
+          "It should be 'name 100'",
+        ),
       ],
     ),
     aok.checkSync(
@@ -241,13 +267,14 @@ suite("validation async with context", () => {
       const result = await aok.runAsyncWithContext(
         validation,
         { name: "", age: 1 },
-        tx,
+        { tx, numStr: "10" },
       );
       assert(!result.ok);
       assert.deepEqual(result.errors, [
         { label: "age", message: "It should be equal to db number." },
         { label: "age", message: "It should be even." },
         { label: "age", message: "It should be 2." },
+        { label: "name", message: "It should be 'name 100'" },
         { label: "name", message: "It shouldn't be empty." },
       ]);
     });
@@ -256,10 +283,8 @@ suite("validation async with context", () => {
       const result = await aok.runAsyncWithContext(
         validation,
         { name: "", age: 1 },
-        tx,
-        {
-          abortEarly: true,
-        },
+        { tx, numStr: "10" },
+        { abortEarly: true },
       );
       assert(!result.ok);
       assert.deepEqual(result.errors, [
@@ -272,7 +297,7 @@ suite("validation async with context", () => {
     const result = await aok.runAsyncWithContext(
       validation,
       { name: "tom", age: 2 },
-      tx,
+      { tx, numStr: "100" },
     );
     assert(result.ok);
     assert.deepEqual(result.data, { name: "tom", age: 2 });
