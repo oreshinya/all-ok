@@ -52,6 +52,19 @@ export type MapSync<TData, TContext> = {
  *     ),
  *   ],
  * );
+ *
+ * aok.mapSync(
+ *   (data: Partial<User>, current: User) => ({...current, ...data}),
+ *   [
+ *     aok.checkSync(
+ *       (user: User) => {
+ *         return user.name !== "tom" || user.age === 9;
+ *       },
+ *       "age",
+ *       "Tom's age should be 9.",
+ *     ),
+ *   ],
+ * );
  * ```
  */
 export function mapSync<TData, UData, TContext>(
@@ -132,6 +145,23 @@ export type MapAsync<TData, TContext> = {
  *       (age: number) => age % 2 === 0,
  *       "age",
  *       "It should be even.",
+ *     ),
+ *   ],
+ * );
+ *
+ * aok.mapAsync(
+ *   (data: Partial<User>, current: User) => ({...current, ...data}),
+ *   [
+ *     aok.checkAsync(
+ *       async (user: User) => {
+ *         if (user.name !== "tom") {
+ *           return true;
+ *         }
+ *         const remoteAge = await Promise.resolve(9);
+ *         return user.age === remoteAge;
+ *       },
+ *       "age",
+ *       "Tom's age should be remote age.",
  *     ),
  *   ],
  * );
