@@ -38,8 +38,8 @@
 | ------ | ------ |
 | [checkAsync](functions/checkAsync.md) | Define asynchronous check. |
 | [checkSync](functions/checkSync.md) | Define synchronous check. |
-| [mapAsync](functions/mapAsync.md) | Delegate asynchronous check to descendants. |
-| [mapSync](functions/mapSync.md) | Delegate synchronous check to descendants. |
+| [mapAsync](functions/mapAsync.md) | Delegate asynchronous check to mapped data. |
+| [mapSync](functions/mapSync.md) | Delegate synchronous check to mapped data. |
 | [runAsync](functions/runAsync.md) | Run asynchronous validations. |
 | [runAsyncWithContext](functions/runAsyncWithContext.md) | Run asynchronous validations with your any context. |
 | [runSync](functions/runSync.md) | Run synchronous validations. |

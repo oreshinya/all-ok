@@ -6,7 +6,7 @@
 
 > **mapAsync**\<`TData`, `UData`, `TContext`\>(`map`: (`data`: `TData`) => `UData` \| (`data`: `TData`, `context`: `TContext`) => `UData`, `validation`: [`ValidationAsync`](../type-aliases/ValidationAsync.md)\<`UData`, `TContext`\>): [`MapAsync`](../type-aliases/MapAsync.md)\<`TData`, `TContext`\>
 
-Delegate asynchronous check to descendants.
+Delegate asynchronous check to mapped data.
 
 ```ts
 import * as aok from 'all-ok';

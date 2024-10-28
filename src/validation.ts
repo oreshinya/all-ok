@@ -30,7 +30,7 @@ export type MapSync<TData, TContext> = {
 };
 
 /**
- * Delegate synchronous check to descendants.
+ * Delegate synchronous check to mapped data.
  *
  * ```ts
  * import * as aok from 'all-ok';
@@ -123,7 +123,7 @@ export type MapAsync<TData, TContext> = {
 };
 
 /**
- * Delegate asynchronous check to descendants.
+ * Delegate asynchronous check to mapped data.
  *
  * ```ts
  * import * as aok from 'all-ok';

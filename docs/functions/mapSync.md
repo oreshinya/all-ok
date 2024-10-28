@@ -6,7 +6,7 @@
 
 > **mapSync**\<`TData`, `UData`, `TContext`\>(`map`: (`data`: `TData`) => `UData` \| (`data`: `TData`, `context`: `TContext`) => `UData`, `validation`: [`ValidationSync`](../type-aliases/ValidationSync.md)\<`UData`, `TContext`\>): [`MapSync`](../type-aliases/MapSync.md)\<`TData`, `TContext`\>
 
-Delegate synchronous check to descendants.
+Delegate synchronous check to mapped data.
 
 ```ts
 import * as aok from 'all-ok';
