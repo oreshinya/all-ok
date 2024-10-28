@@ -1,8 +1,8 @@
-**all-ok v0.2.0** • **Docs**
+**all-ok v0.3.0** • **Docs**
 
 ***
 
-# all-ok v0.2.0
+# all-ok v0.3.0
 
 ## Modules
 
@@ -18,9 +18,9 @@
 | [BrandName](type-aliases/BrandName.md) | - |
 | [CheckAsync](type-aliases/CheckAsync.md) | - |
 | [CheckSync](type-aliases/CheckSync.md) | - |
-| [ChildAsync](type-aliases/ChildAsync.md) | - |
-| [ChildSync](type-aliases/ChildSync.md) | - |
 | [ErrorInfo](type-aliases/ErrorInfo.md) | - |
+| [MapAsync](type-aliases/MapAsync.md) | - |
+| [MapSync](type-aliases/MapSync.md) | - |
 | [Options](type-aliases/Options.md) | - |
 | [Result](type-aliases/Result.md) | Validation result type. |
 | [ValidationAsync](type-aliases/ValidationAsync.md) | - |
@@ -38,8 +38,8 @@
 | ------ | ------ |
 | [checkAsync](functions/checkAsync.md) | Define asynchronous check. |
 | [checkSync](functions/checkSync.md) | Define synchronous check. |
-| [childAsync](functions/childAsync.md) | Delegate asynchronous check to descendants. |
-| [childSync](functions/childSync.md) | Delegate synchronous check to descendants. |
+| [mapAsync](functions/mapAsync.md) | Delegate asynchronous check to descendants. |
+| [mapSync](functions/mapSync.md) | Delegate synchronous check to descendants. |
 | [runAsync](functions/runAsync.md) | Run asynchronous validations. |
 | [runAsyncWithContext](functions/runAsyncWithContext.md) | Run asynchronous validations with your any context. |
 | [runSync](functions/runSync.md) | Run synchronous validations. |
