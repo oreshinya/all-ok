@@ -6,14 +6,14 @@ export { checkAsync } from "./check-async";
 
 export type {
   Options,
-  ChildSync,
-  ChildAsync,
+  MapSync,
+  MapAsync,
   ValidationSync,
   ValidationAsync,
 } from "./validation";
 export {
-  childSync,
-  childAsync,
+  mapSync,
+  mapAsync,
 } from "./validation";
 
 export {

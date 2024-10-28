@@ -9,7 +9,7 @@ type Data = {
 
 suite("validation sync", () => {
   const validation = [
-    aok.childSync(
+    aok.mapSync(
       (data: Data) => data.age,
       [
         aok.checkSync(
@@ -64,7 +64,7 @@ suite("validation sync", () => {
 
 suite("validation sync with context", () => {
   const validation = [
-    aok.childSync(
+    aok.mapSync(
       (data: Data) => data.age,
       [
         aok.checkSync(
@@ -136,7 +136,7 @@ suite("validation sync with context", () => {
 
 suite("validation async", () => {
   const validation = [
-    aok.childAsync(
+    aok.mapAsync(
       (data: Data) => data.age,
       [
         aok.checkAsync(
@@ -210,7 +210,7 @@ suite("validation async with context", () => {
   };
 
   const validation = [
-    aok.childAsync(
+    aok.mapAsync(
       (data: Data) => data.age,
       [
         aok.checkAsync(

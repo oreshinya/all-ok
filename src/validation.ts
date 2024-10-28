@@ -3,14 +3,14 @@ import type { CheckSyncAll } from "./check-sync";
 import type { ErrorInfo } from "./result";
 
 export type ValidationSync<TData, TContext = unknown> = Array<
-  CheckSyncAll<TData, TContext> | ChildSync<TData, TContext>
+  CheckSyncAll<TData, TContext> | MapSync<TData, TContext>
 >;
 
 export type ValidationAsync<TData, TContext = unknown> = Array<
   | CheckSyncAll<TData, TContext>
   | CheckAsyncAll<TData, TContext>
-  | ChildSync<TData, TContext>
-  | ChildAsync<TData, TContext>
+  | MapSync<TData, TContext>
+  | MapAsync<TData, TContext>
 >;
 
 export type Options = {
@@ -20,8 +20,8 @@ export type Options = {
   abortEarly?: boolean;
 };
 
-export type ChildSync<TData, TContext> = {
-  type: "ChildSync";
+export type MapSync<TData, TContext> = {
+  type: "MapSync";
   fn: (
     data: TData,
     context: TContext,
@@ -37,7 +37,7 @@ export type ChildSync<TData, TContext> = {
  *
  * type User = { name: string, age: number };
  *
- * aok.childSync(
+ * aok.mapSync(
  *   (user: User) => user.age,
  *   [
  *     aok.checkSync(
@@ -54,16 +54,14 @@ export type ChildSync<TData, TContext> = {
  * );
  * ```
  */
-export function childSync<TData, TChild, TContext>(
-  pick:
-    | ((data: TData) => TChild)
-    | ((data: TData, context: TContext) => TChild),
-  validation: ValidationSync<TChild, TContext>,
-): ChildSync<TData, TContext> {
+export function mapSync<TData, UData, TContext>(
+  map: ((data: TData) => UData) | ((data: TData, context: TContext) => UData),
+  validation: ValidationSync<UData, TContext>,
+): MapSync<TData, TContext> {
   return {
-    type: "ChildSync",
+    type: "MapSync",
     fn: (data, context, options) => {
-      return processSync(validation, pick(data, context), context, options);
+      return processSync(validation, map(data, context), context, options);
     },
   };
 }
@@ -102,8 +100,8 @@ export function processSync<TData, TContext>(
   return errors;
 }
 
-export type ChildAsync<TData, TContext> = {
-  type: "ChildAsync";
+export type MapAsync<TData, TContext> = {
+  type: "MapAsync";
   fn: (
     data: TData,
     context: TContext,
@@ -119,7 +117,7 @@ export type ChildAsync<TData, TContext> = {
  *
  * type User = { name: string, age: number };
  *
- * aok.childAsync(
+ * aok.mapAsync(
  *   (user: User) => user.age,
  *   [
  *     aok.checkAsync(
@@ -139,16 +137,14 @@ export type ChildAsync<TData, TContext> = {
  * );
  * ```
  */
-export function childAsync<TData, TChild, TContext>(
-  pick:
-    | ((data: TData) => TChild)
-    | ((data: TData, context: TContext) => TChild),
-  validation: ValidationAsync<TChild, TContext>,
-): ChildAsync<TData, TContext> {
+export function mapAsync<TData, UData, TContext>(
+  map: ((data: TData) => UData) | ((data: TData, context: TContext) => UData),
+  validation: ValidationAsync<UData, TContext>,
+): MapAsync<TData, TContext> {
   return {
-    type: "ChildAsync",
+    type: "MapAsync",
     fn: (data, context, options) => {
-      return processAsync(validation, pick(data, context), context, options);
+      return processAsync(validation, map(data, context), context, options);
     },
   };
 }
@@ -172,7 +168,7 @@ export async function processAsync<TData, TContext>(
         }
         break;
       }
-      case "ChildAsync": {
+      case "MapAsync": {
         const leafErrors = await leaf.fn(data, context, options);
         if (leafErrors.length > 0) {
           errors.push(...leafErrors);
