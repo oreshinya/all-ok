@@ -14,13 +14,18 @@ $ npm install all-ok
 
 ## Introduction
 
-It's essential to maintain type information obtained through validation and narrow down types appropriately when parsing data from external boundaries using schema validation libraries such as Zod, Valibot, and others.
+It's important to parse input data and narrow down its types more strictly using schema validation packages such as Zod, Valibot, and others.
 
-However, in server-side applications, teams may differ in how strictly they validate and narrow down types before reaching domain logic, as the decoding happens at the outer layer while domain logic sits deeper in the application.
+A typical server-side implementation first parses external input into appropriate types before passing it to domain logic,
+then additional validations are executed in the domain logic.
 
-This package helps you adjust the balance of validation approaches in your server-side code. At external boundaries, you can parse data into suitably strict types using schema validation libraries, while using this package to perform validation in your domain logic.
+When implementing validations in domain logic, you might have the following needs:
 
-For full-stack TypeScript applications, you can also partially reuse the validation code defined with this package in your frontend implementations that use schema validation libraries.
+- Function-based validation rather than additional schema validation
+- Easy validation with server-generated objects (a transaction object and other non-external objects)
+- Sharing domain validation logic with frontend schema validation in full-stack TypeScript applications
+
+This package addresses all these needs. While designed to work with schema validation packages, it can also be used independently.
 
 ## Usage
 
