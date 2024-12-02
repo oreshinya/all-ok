@@ -44,7 +44,7 @@
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
     "tsup": "^8.3.0",
-    "typedoc": "^0.26.10",
+    "typedoc": "^0.27.2",
     "typedoc-plugin-markdown": "^4.2.9",
     "typedoc-plugin-missing-exports": "^3.0.0",
     "typescript": "^5.6.3",
