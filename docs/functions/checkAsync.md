@@ -1,10 +1,10 @@
-[**all-ok**](../README.md) • **Docs**
+[**all-ok**](../README.md)
 
 ***
 
 # Function: checkAsync()
 
-## checkAsync(fn, label, message)
+## Call Signature
 
 > **checkAsync**\<`TLabel`, `TData`\>(`fn`: [`FnAsync`](../-internal-/type-aliases/FnAsync.md)\<`TData`\>, `label`: `TLabel`, `message`: `string`): [`CheckAsync`](../type-aliases/CheckAsync.md)\<`TLabel`, [`FnAsync`](../-internal-/type-aliases/FnAsync.md)\<`TData`\>\>
 
@@ -44,7 +44,7 @@ aok.checkAsync(
 
 [`CheckAsync`](../type-aliases/CheckAsync.md)\<`TLabel`, [`FnAsync`](../-internal-/type-aliases/FnAsync.md)\<`TData`\>\>
 
-## checkAsync(fn, label, message)
+## Call Signature
 
 > **checkAsync**\<`TLabel`, `TData`, `TContext`\>(`fn`: [`FnAsyncWithContext`](../-internal-/type-aliases/FnAsyncWithContext.md)\<`TData`, `TContext`\>, `label`: `TLabel`, `message`: `string`): [`CheckAsync`](../type-aliases/CheckAsync.md)\<`TLabel`, [`FnAsyncWithContext`](../-internal-/type-aliases/FnAsyncWithContext.md)\<`TData`, `TContext`\>\>
 

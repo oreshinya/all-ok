@@ -1,4 +1,4 @@
-[**all-ok**](../README.md) • **Docs**
+[**all-ok**](../README.md)
 
 ***
 

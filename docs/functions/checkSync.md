@@ -1,10 +1,10 @@
-[**all-ok**](../README.md) • **Docs**
+[**all-ok**](../README.md)
 
 ***
 
 # Function: checkSync()
 
-## checkSync(fn, label, message)
+## Call Signature
 
 > **checkSync**\<`TLabel`, `TData`\>(`fn`: [`FnSync`](../-internal-/type-aliases/FnSync.md)\<`TData`\>, `label`: `TLabel`, `message`: `string`): [`CheckSync`](../type-aliases/CheckSync.md)\<`TLabel`, [`FnSync`](../-internal-/type-aliases/FnSync.md)\<`TData`\>\>
 
@@ -43,7 +43,7 @@ aok.checkSync(
 
 [`CheckSync`](../type-aliases/CheckSync.md)\<`TLabel`, [`FnSync`](../-internal-/type-aliases/FnSync.md)\<`TData`\>\>
 
-## checkSync(fn, label, message)
+## Call Signature
 
 > **checkSync**\<`TLabel`, `TData`, `TContext`\>(`fn`: [`FnSyncWithContext`](../-internal-/type-aliases/FnSyncWithContext.md)\<`TData`, `TContext`\>, `label`: `TLabel`, `message`: `string`): [`CheckSync`](../type-aliases/CheckSync.md)\<`TLabel`, [`FnSyncWithContext`](../-internal-/type-aliases/FnSyncWithContext.md)\<`TData`, `TContext`\>\>
 
