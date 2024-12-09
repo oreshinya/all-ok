@@ -4,7 +4,7 @@
 
 # Type Alias: CheckAsync\<TLabel, TFnAync\>
 
-> **CheckAsync**\<`TLabel`, `TFnAync`\>: \{`error`: [`ErrorInfo`](ErrorInfo.md)\<`TLabel`\>;`fn`: `TFnAync`;`type`: `"CheckAsync"`; \}
+> **CheckAsync**\<`TLabel`, `TFnAync`\>: \{ `error`: [`ErrorInfo`](ErrorInfo.md)\<`TLabel`\>; `fn`: `TFnAync`; `type`: `"CheckAsync"`; \}
 
 ## Type Parameters
 

@@ -4,7 +4,7 @@
 
 # Type Alias: ErrorInfo\<TLabel\>
 
-> **ErrorInfo**\<`TLabel`\>: \{`label`: `TLabel`;`message`: `string`; \}
+> **ErrorInfo**\<`TLabel`\>: \{ `label`: `TLabel`; `message`: `string`; \}
 
 ## Type Parameters
 

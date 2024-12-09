@@ -4,7 +4,7 @@
 
 # Type Alias: MapSync\<TData, TContext\>
 
-> **MapSync**\<`TData`, `TContext`\>: \{`fn`: (`data`: `TData`, `context`: `TContext`, `options`: [`Options`](Options.md)) => [`ErrorInfo`](ErrorInfo.md)\<`string`\>[];`type`: `"MapSync"`; \}
+> **MapSync**\<`TData`, `TContext`\>: \{ `fn`: (`data`: `TData`, `context`: `TContext`, `options`: [`Options`](Options.md)) => [`ErrorInfo`](ErrorInfo.md)\<`string`\>[]; `type`: `"MapSync"`; \}
 
 ## Type Parameters
 

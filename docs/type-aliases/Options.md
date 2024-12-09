@@ -4,7 +4,7 @@
 
 # Type Alias: Options
 
-> **Options**: \{`abortEarly`: `boolean`; \}
+> **Options**: \{ `abortEarly`: `boolean`; \}
 
 ## Type declaration
 

@@ -4,7 +4,7 @@
 
 # Type Alias: MapAsync\<TData, TContext\>
 
-> **MapAsync**\<`TData`, `TContext`\>: \{`fn`: (`data`: `TData`, `context`: `TContext`, `options`: [`Options`](Options.md)) => `Promise`\<[`ErrorInfo`](ErrorInfo.md)\<`string`\>[]\>;`type`: `"MapAsync"`; \}
+> **MapAsync**\<`TData`, `TContext`\>: \{ `fn`: (`data`: `TData`, `context`: `TContext`, `options`: [`Options`](Options.md)) => `Promise`\<[`ErrorInfo`](ErrorInfo.md)\<`string`\>[]\>; `type`: `"MapAsync"`; \}
 
 ## Type Parameters
 

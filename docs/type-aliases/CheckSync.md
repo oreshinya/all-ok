@@ -4,7 +4,7 @@
 
 # Type Alias: CheckSync\<TLabel, TFnSync\>
 
-> **CheckSync**\<`TLabel`, `TFnSync`\>: \{`error`: [`ErrorInfo`](ErrorInfo.md)\<`TLabel`\>;`fn`: `TFnSync`;`type`: `"CheckSync"`; \}
+> **CheckSync**\<`TLabel`, `TFnSync`\>: \{ `error`: [`ErrorInfo`](ErrorInfo.md)\<`TLabel`\>; `fn`: `TFnSync`; `type`: `"CheckSync"`; \}
 
 ## Type Parameters
 

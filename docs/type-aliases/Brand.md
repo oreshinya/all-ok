@@ -4,7 +4,7 @@
 
 # Type Alias: Brand\<TBrandName\>
 
-> **Brand**\<`TBrandName`\>: \{`[BrandKey]`: `{ [T in TBrandName]: T }`; \}
+> **Brand**\<`TBrandName`\>: \{ `[BrandKey]`: `{ [T in TBrandName]: T }`; \}
 
 Brand type.
 
