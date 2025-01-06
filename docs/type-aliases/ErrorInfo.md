@@ -16,5 +16,5 @@
 
 | Name | Type |
 | ------ | ------ |
-| `label` | `TLabel` |
-| `message` | `string` |
+| <a id="label"></a> `label` | `TLabel` |
+| <a id="message"></a> `message` | `string` |

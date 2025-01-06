@@ -17,5 +17,5 @@
 
 | Name | Type |
 | ------ | ------ |
-| `fn` | (`data`: `TData`, `context`: `TContext`, `options`: [`Options`](Options.md)) => [`ErrorInfo`](ErrorInfo.md)\<`string`\>[] |
-| `type` | `"MapSync"` |
+| <a id="fn"></a> `fn` | (`data`: `TData`, `context`: `TContext`, `options`: [`Options`](Options.md)) => [`ErrorInfo`](ErrorInfo.md)\<`string`\>[] |
+| <a id="type"></a> `type` | `"MapSync"` |

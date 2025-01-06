@@ -17,6 +17,6 @@
 
 | Name | Type |
 | ------ | ------ |
-| `error` | [`ErrorInfo`](ErrorInfo.md)\<`TLabel`\> |
-| `fn` | `TFnAync` |
-| `type` | `"CheckAsync"` |
+| <a id="error"></a> `error` | [`ErrorInfo`](ErrorInfo.md)\<`TLabel`\> |
+| <a id="fn"></a> `fn` | `TFnAync` |
+| <a id="type"></a> `type` | `"CheckAsync"` |

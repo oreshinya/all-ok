@@ -10,4 +10,4 @@
 
 | Name | Type | Description |
 | ------ | ------ | ------ |
-| `abortEarly`? | `boolean` | If you set abortEarly to true, the runner immediately abort the validation after finding the first error. |
+| <a id="abortearly"></a> `abortEarly`? | `boolean` | If you set abortEarly to true, the runner immediately abort the validation after finding the first error. |

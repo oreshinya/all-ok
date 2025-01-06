@@ -4,9 +4,7 @@
 
 # \<internal\>
 
-## Index
-
-### Type Aliases
+## Type Aliases
 
 | Type alias | Description |
 | ------ | ------ |

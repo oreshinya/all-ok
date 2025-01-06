@@ -17,5 +17,5 @@
 
 | Name | Type |
 | ------ | ------ |
-| `fn` | (`data`: `TData`, `context`: `TContext`, `options`: [`Options`](Options.md)) => `Promise`\<[`ErrorInfo`](ErrorInfo.md)\<`string`\>[]\> |
-| `type` | `"MapAsync"` |
+| <a id="fn"></a> `fn` | (`data`: `TData`, `context`: `TContext`, `options`: [`Options`](Options.md)) => `Promise`\<[`ErrorInfo`](ErrorInfo.md)\<`string`\>[]\> |
+| <a id="type"></a> `type` | `"MapAsync"` |

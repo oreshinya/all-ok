@@ -18,4 +18,4 @@ Brand type.
 
 | Name | Type |
 | ------ | ------ |
-| `[BrandKey]` | `{ [T in TBrandName]: T }` |
+| <a id="brandkey"></a> `[BrandKey]` | `{ [T in TBrandName]: T }` |
