@@ -4,7 +4,7 @@
 
 # Type Alias: ErrorInfo\<TLabel\>
 
-> **ErrorInfo**\<`TLabel`\>: \{ `label`: `TLabel`; `message`: `string`; \}
+> **ErrorInfo**\<`TLabel`\> = \{ `label`: `TLabel`; `message`: `string`; \}
 
 ## Type Parameters
 
@@ -12,9 +12,14 @@
 | ------ |
 | `TLabel` *extends* `string` |
 
-## Type declaration
+## Properties
 
-| Name | Type |
-| ------ | ------ |
-| <a id="label"></a> `label` | `TLabel` |
-| <a id="message"></a> `message` | `string` |
+### label
+
+> **label**: `TLabel`
+
+***
+
+### message
+
+> **message**: `string`

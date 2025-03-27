@@ -12,7 +12,7 @@
 
 ## Type Aliases
 
-| Type alias | Description |
+| Type Alias | Description |
 | ------ | ------ |
 | [Brand](type-aliases/Brand.md) | Brand type. |
 | [BrandName](type-aliases/BrandName.md) | - |

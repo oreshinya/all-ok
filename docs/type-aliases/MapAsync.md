@@ -4,7 +4,7 @@
 
 # Type Alias: MapAsync\<TData, TContext\>
 
-> **MapAsync**\<`TData`, `TContext`\>: \{ `fn`: (`data`: `TData`, `context`: `TContext`, `options`: [`Options`](Options.md)) => `Promise`\<[`ErrorInfo`](ErrorInfo.md)\<`string`\>[]\>; `type`: `"MapAsync"`; \}
+> **MapAsync**\<`TData`, `TContext`\> = \{ `fn`: (`data`: `TData`, `context`: `TContext`, `options`: [`Options`](Options.md)) => `Promise`\<[`ErrorInfo`](ErrorInfo.md)\<`string`\>[]\>; `type`: `"MapAsync"`; \}
 
 ## Type Parameters
 
@@ -13,9 +13,26 @@
 | `TData` |
 | `TContext` |
 
-## Type declaration
+## Properties
 
-| Name | Type |
+### fn()
+
+> **fn**: (`data`: `TData`, `context`: `TContext`, `options`: [`Options`](Options.md)) => `Promise`\<[`ErrorInfo`](ErrorInfo.md)\<`string`\>[]\>
+
+#### Parameters
+
+| Parameter | Type |
 | ------ | ------ |
-| <a id="fn"></a> `fn` | (`data`: `TData`, `context`: `TContext`, `options`: [`Options`](Options.md)) => `Promise`\<[`ErrorInfo`](ErrorInfo.md)\<`string`\>[]\> |
-| <a id="type"></a> `type` | `"MapAsync"` |
+| `data` | `TData` |
+| `context` | `TContext` |
+| `options` | [`Options`](Options.md) |
+
+#### Returns
+
+`Promise`\<[`ErrorInfo`](ErrorInfo.md)\<`string`\>[]\>
+
+***
+
+### type
+
+> **type**: `"MapAsync"`

@@ -4,10 +4,12 @@
 
 # Type Alias: Options
 
-> **Options**: \{ `abortEarly`: `boolean`; \}
+> **Options** = \{ `abortEarly`: `boolean`; \}
 
-## Type declaration
+## Properties
 
-| Name | Type | Description |
-| ------ | ------ | ------ |
-| <a id="abortearly"></a> `abortEarly`? | `boolean` | If you set abortEarly to true, the runner immediately abort the validation after finding the first error. |
+### abortEarly?
+
+> `optional` **abortEarly**: `boolean`
+
+If you set abortEarly to true, the runner immediately abort the validation after finding the first error.

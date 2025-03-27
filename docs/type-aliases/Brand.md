@@ -4,7 +4,7 @@
 
 # Type Alias: Brand\<TBrandName\>
 
-> **Brand**\<`TBrandName`\>: \{ `[BrandKey]`: `{ [T in TBrandName]: T }`; \}
+> **Brand**\<`TBrandName`\> = \{ `[BrandKey]`: `{ [T in TBrandName]: T }`; \}
 
 Brand type.
 
@@ -14,8 +14,8 @@ Brand type.
 | ------ |
 | `TBrandName` *extends* [`BrandName`](BrandName.md) |
 
-## Type declaration
+## Properties
 
-| Name | Type |
-| ------ | ------ |
-| <a id="brandkey"></a> `[BrandKey]` | `{ [T in TBrandName]: T }` |
+### \[BrandKey\]
+
+> **\[BrandKey\]**: `{ [T in TBrandName]: T }`

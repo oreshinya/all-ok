@@ -4,7 +4,7 @@
 
 # Type Alias: FnAsyncWithContext()\<TData, TContext\>
 
-> **FnAsyncWithContext**\<`TData`, `TContext`\>: (`data`: `TData`, `context`: `TContext`) => `Promise`\<`boolean`\>
+> **FnAsyncWithContext**\<`TData`, `TContext`\> = (`data`: `TData`, `context`: `TContext`) => `Promise`\<`boolean`\>
 
 ## Type Parameters
 

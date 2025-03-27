@@ -6,7 +6,7 @@
 
 ## Type Aliases
 
-| Type alias | Description |
+| Type Alias | Description |
 | ------ | ------ |
 | [CheckAsyncAll](type-aliases/CheckAsyncAll.md) | - |
 | [CheckSyncAll](type-aliases/CheckSyncAll.md) | - |

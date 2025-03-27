@@ -4,7 +4,7 @@
 
 # Type Alias: FnSyncAll\<TData, TContext\>
 
-> **FnSyncAll**\<`TData`, `TContext`\>: [`FnSync`](FnSync.md)\<`TData`\> \| [`FnSyncWithContext`](FnSyncWithContext.md)\<`TData`, `TContext`\>
+> **FnSyncAll**\<`TData`, `TContext`\> = [`FnSync`](FnSync.md)\<`TData`\> \| [`FnSyncWithContext`](FnSyncWithContext.md)\<`TData`, `TContext`\>
 
 ## Type Parameters
 

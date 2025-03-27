@@ -4,4 +4,4 @@
 
 # Type Alias: BrandName
 
-> **BrandName**: `string` \| `number` \| `symbol`
+> **BrandName** = `string` \| `number` \| `symbol`

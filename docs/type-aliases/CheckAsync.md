@@ -4,7 +4,7 @@
 
 # Type Alias: CheckAsync\<TLabel, TFnAync\>
 
-> **CheckAsync**\<`TLabel`, `TFnAync`\>: \{ `error`: [`ErrorInfo`](ErrorInfo.md)\<`TLabel`\>; `fn`: `TFnAync`; `type`: `"CheckAsync"`; \}
+> **CheckAsync**\<`TLabel`, `TFnAync`\> = \{ `error`: [`ErrorInfo`](ErrorInfo.md)\<`TLabel`\>; `fn`: `TFnAync`; `type`: `"CheckAsync"`; \}
 
 ## Type Parameters
 
@@ -13,10 +13,20 @@
 | `TLabel` *extends* `string` |
 | `TFnAync` |
 
-## Type declaration
+## Properties
 
-| Name | Type |
-| ------ | ------ |
-| <a id="error"></a> `error` | [`ErrorInfo`](ErrorInfo.md)\<`TLabel`\> |
-| <a id="fn"></a> `fn` | `TFnAync` |
-| <a id="type"></a> `type` | `"CheckAsync"` |
+### error
+
+> **error**: [`ErrorInfo`](ErrorInfo.md)\<`TLabel`\>
+
+***
+
+### fn
+
+> **fn**: `TFnAync`
+
+***
+
+### type
+
+> **type**: `"CheckAsync"`

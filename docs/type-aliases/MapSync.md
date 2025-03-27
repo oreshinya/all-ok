@@ -4,7 +4,7 @@
 
 # Type Alias: MapSync\<TData, TContext\>
 
-> **MapSync**\<`TData`, `TContext`\>: \{ `fn`: (`data`: `TData`, `context`: `TContext`, `options`: [`Options`](Options.md)) => [`ErrorInfo`](ErrorInfo.md)\<`string`\>[]; `type`: `"MapSync"`; \}
+> **MapSync**\<`TData`, `TContext`\> = \{ `fn`: (`data`: `TData`, `context`: `TContext`, `options`: [`Options`](Options.md)) => [`ErrorInfo`](ErrorInfo.md)\<`string`\>[]; `type`: `"MapSync"`; \}
 
 ## Type Parameters
 
@@ -13,9 +13,26 @@
 | `TData` |
 | `TContext` |
 
-## Type declaration
+## Properties
 
-| Name | Type |
+### fn()
+
+> **fn**: (`data`: `TData`, `context`: `TContext`, `options`: [`Options`](Options.md)) => [`ErrorInfo`](ErrorInfo.md)\<`string`\>[]
+
+#### Parameters
+
+| Parameter | Type |
 | ------ | ------ |
-| <a id="fn"></a> `fn` | (`data`: `TData`, `context`: `TContext`, `options`: [`Options`](Options.md)) => [`ErrorInfo`](ErrorInfo.md)\<`string`\>[] |
-| <a id="type"></a> `type` | `"MapSync"` |
+| `data` | `TData` |
+| `context` | `TContext` |
+| `options` | [`Options`](Options.md) |
+
+#### Returns
+
+[`ErrorInfo`](ErrorInfo.md)\<`string`\>[]
+
+***
+
+### type
+
+> **type**: `"MapSync"`
