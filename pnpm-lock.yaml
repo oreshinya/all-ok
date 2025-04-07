@@ -13,22 +13,22 @@ importers:
         version: 1.9.4
       tsup:
         specifier: ^8.3.5
-        version: 8.4.0(postcss@8.5.3)(typescript@5.8.2)(yaml@2.7.0)
+        version: 8.4.0(postcss@8.5.3)(typescript@5.8.3)(yaml@2.7.0)
       typedoc:
         specifier: ^0.28.1
-        version: 0.28.1(typescript@5.8.2)
+        version: 0.28.1(typescript@5.8.3)
       typedoc-plugin-markdown:
         specifier: ^4.4.1
-        version: 4.6.0(typedoc@0.28.1(typescript@5.8.2))
+        version: 4.6.0(typedoc@0.28.1(typescript@5.8.3))
       typedoc-plugin-missing-exports:
         specifier: ^4.0.0
-        version: 4.0.0(typedoc@0.28.1(typescript@5.8.2))
+        version: 4.0.0(typedoc@0.28.1(typescript@5.8.3))
       typescript:
         specifier: ^5.7.2
-        version: 5.8.2
+        version: 5.8.3
       valibot:
         specifier: ^1.0.0
-        version: 1.0.0(typescript@5.8.2)
+        version: 1.0.0(typescript@5.8.3)
       vitest:
         specifier: ^3.0.2
         version: 3.0.9(@types/node@22.7.9)(yaml@2.7.0)
@@ -1078,8 +1078,8 @@ packages:
     peerDependencies:
       typescript: 5.0.x || 5.1.x || 5.2.x || 5.3.x || 5.4.x || 5.5.x || 5.6.x || 5.7.x || 5.8.x
 
-  typescript@5.8.2:
-    resolution: {integrity: sha512-aJn6wq13/afZp/jT9QZmwEjDqqvSGp1VT5GVg+f/t6/oVyrgXM6BY1h9BRh/O5p3PlUPAe+WuiEZOmb/49RqoQ==}
+  typescript@5.8.3:
+    resolution: {integrity: sha512-p1diW6TqL9L07nNxvRMM7hMMw4c5XOo/1ibL4aAIGmSAt9slTE1Xgw5KWuof2uTOvCg9BY7ZRi+GaF+7sfgPeQ==}
     engines: {node: '>=14.17'}
     hasBin: true
 
@@ -1996,7 +1996,7 @@ snapshots:
 
   ts-interface-checker@0.1.13: {}
 
-  tsup@8.4.0(postcss@8.5.3)(typescript@5.8.2)(yaml@2.7.0):
+  tsup@8.4.0(postcss@8.5.3)(typescript@5.8.3)(yaml@2.7.0):
     dependencies:
       bundle-require: 5.1.0(esbuild@0.25.0)
       cac: 6.7.14
@@ -2016,40 +2016,40 @@ snapshots:
       tree-kill: 1.2.2
     optionalDependencies:
       postcss: 8.5.3
-      typescript: 5.8.2
+      typescript: 5.8.3
     transitivePeerDependencies:
       - jiti
       - supports-color
       - tsx
       - yaml
 
-  typedoc-plugin-markdown@4.6.0(typedoc@0.28.1(typescript@5.8.2)):
+  typedoc-plugin-markdown@4.6.0(typedoc@0.28.1(typescript@5.8.3)):
     dependencies:
-      typedoc: 0.28.1(typescript@5.8.2)
+      typedoc: 0.28.1(typescript@5.8.3)
 
-  typedoc-plugin-missing-exports@4.0.0(typedoc@0.28.1(typescript@5.8.2)):
+  typedoc-plugin-missing-exports@4.0.0(typedoc@0.28.1(typescript@5.8.3)):
     dependencies:
-      typedoc: 0.28.1(typescript@5.8.2)
+      typedoc: 0.28.1(typescript@5.8.3)
 
-  typedoc@0.28.1(typescript@5.8.2):
+  typedoc@0.28.1(typescript@5.8.3):
     dependencies:
       '@gerrit0/mini-shiki': 3.2.1
       lunr: 2.3.9
       markdown-it: 14.1.0
       minimatch: 9.0.5
-      typescript: 5.8.2
+      typescript: 5.8.3
       yaml: 2.7.0
 
-  typescript@5.8.2: {}
+  typescript@5.8.3: {}
 
   uc.micro@2.1.0: {}
 
   undici-types@6.19.8:
     optional: true
 
-  valibot@1.0.0(typescript@5.8.2):
+  valibot@1.0.0(typescript@5.8.3):
     optionalDependencies:
-      typescript: 5.8.2
+      typescript: 5.8.3
 
   vite-node@3.0.9(@types/node@22.7.9)(yaml@2.7.0):
     dependencies:
