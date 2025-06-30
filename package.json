@@ -42,7 +42,7 @@
     "build": "tsup"
   },
   "devDependencies": {
-    "@biomejs/biome": "1.9.4",
+    "@biomejs/biome": "2.0.6",
     "tsup": "^8.3.5",
     "typedoc": "^0.28.1",
     "typedoc-plugin-markdown": "^4.4.1",
