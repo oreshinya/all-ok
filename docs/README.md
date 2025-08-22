@@ -15,6 +15,7 @@
 | Type Alias | Description |
 | ------ | ------ |
 | [Brand](type-aliases/Brand.md) | Brand type. |
+| [BrandKey](type-aliases/BrandKey.md) | - |
 | [BrandName](type-aliases/BrandName.md) | - |
 | [CheckAsync](type-aliases/CheckAsync.md) | - |
 | [CheckSync](type-aliases/CheckSync.md) | - |
@@ -25,12 +26,6 @@
 | [Result](type-aliases/Result.md) | Validation result type. |
 | [ValidationAsync](type-aliases/ValidationAsync.md) | - |
 | [ValidationSync](type-aliases/ValidationSync.md) | - |
-
-## Variables
-
-| Variable | Description |
-| ------ | ------ |
-| [BrandKey](variables/BrandKey.md) | - |
 
 ## Functions
 
