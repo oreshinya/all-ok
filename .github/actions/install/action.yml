@@ -4,9 +4,7 @@ inputs:
 runs:
   using: "composite"
   steps:
-    - run: |
-        npm install -g corepack@latest
-        corepack enable
+    - run: corepack enable
       shell: bash
     - uses: actions/setup-node@v4
       with:
