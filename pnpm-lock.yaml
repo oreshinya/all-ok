@@ -19,7 +19,7 @@ importers:
         version: 0.28.12(typescript@5.9.2)
       typedoc-plugin-markdown:
         specifier: ^4.4.1
-        version: 4.8.1(typedoc@0.28.12(typescript@5.9.2))
+        version: 4.9.0(typedoc@0.28.12(typescript@5.9.2))
       typedoc-plugin-missing-exports:
         specifier: ^4.0.0
         version: 4.1.0(typedoc@0.28.12(typescript@5.9.2))
@@ -1116,8 +1116,8 @@ packages:
       typescript:
         optional: true
 
-  typedoc-plugin-markdown@4.8.1:
-    resolution: {integrity: sha512-ug7fc4j0SiJxSwBGLncpSo8tLvrT9VONvPUQqQDTKPxCoFQBADLli832RGPtj6sfSVJebNSrHZQRUdEryYH/7g==}
+  typedoc-plugin-markdown@4.9.0:
+    resolution: {integrity: sha512-9Uu4WR9L7ZBgAl60N/h+jqmPxxvnC9nQAlnnO/OujtG2ubjnKTVUFY1XDhcMY+pCqlX3N2HsQM2QTYZIU9tJuw==}
     engines: {node: '>= 18'}
     peerDependencies:
       typedoc: 0.28.x
@@ -2145,7 +2145,7 @@ snapshots:
       - tsx
       - yaml
 
-  typedoc-plugin-markdown@4.8.1(typedoc@0.28.12(typescript@5.9.2)):
+  typedoc-plugin-markdown@4.9.0(typedoc@0.28.12(typescript@5.9.2)):
     dependencies:
       typedoc: 0.28.12(typescript@5.9.2)
 
