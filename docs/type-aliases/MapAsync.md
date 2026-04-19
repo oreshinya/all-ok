@@ -15,7 +15,7 @@
 
 ## Properties
 
-### fn()
+### fn
 
 > **fn**: (`data`: `TData`, `context`: `TContext`, `options`: [`Options`](Options.md)) => `Promise`\<[`ErrorInfo`](ErrorInfo.md)\<`string`\>[]\>
 

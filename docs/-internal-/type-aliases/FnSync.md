@@ -2,7 +2,7 @@
 
 ***
 
-# Type Alias: FnSync()\<TData\>
+# Type Alias: FnSync\<TData\>
 
 > **FnSync**\<`TData`\> = (`data`: `TData`) => `boolean`
 

@@ -4,7 +4,7 @@
 
 # Function: runSync()
 
-> **runSync**\<`TData`\>(`validation`: [`ValidationSync`](../type-aliases/ValidationSync.md)\<`TData`\>, `data`: `TData`, `options`: [`Options`](../type-aliases/Options.md)): [`Result`](../type-aliases/Result.md)\<`TData`\>
+> **runSync**\<`TData`\>(`validation`: [`ValidationSync`](../type-aliases/ValidationSync.md)\<`TData`\>, `data`: `TData`, `options?`: [`Options`](../type-aliases/Options.md)): [`Result`](../type-aliases/Result.md)\<`TData`\>
 
 Run synchronous validations.
 

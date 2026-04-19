@@ -2,7 +2,7 @@
 
 ***
 
-# Type Alias: FnAsync()\<TData\>
+# Type Alias: FnAsync\<TData\>
 
 > **FnAsync**\<`TData`\> = (`data`: `TData`) => `Promise`\<`boolean`\>
 

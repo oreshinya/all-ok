@@ -2,7 +2,7 @@
 
 ***
 
-# Type Alias: FnSyncWithContext()\<TData, TContext\>
+# Type Alias: FnSyncWithContext\<TData, TContext\>
 
 > **FnSyncWithContext**\<`TData`, `TContext`\> = (`data`: `TData`, `context`: `TContext`) => `boolean`
 

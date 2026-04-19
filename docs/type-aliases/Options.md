@@ -10,6 +10,6 @@
 
 ### abortEarly?
 
-> `optional` **abortEarly**: `boolean`
+> `optional` **abortEarly?**: `boolean`
 
 If you set abortEarly to true, the runner immediately abort the validation after finding the first error.

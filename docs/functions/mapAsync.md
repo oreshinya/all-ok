@@ -4,7 +4,7 @@
 
 # Function: mapAsync()
 
-> **mapAsync**\<`TData`, `UData`, `TContext`\>(`map`: (`data`: `TData`) => `UData` \| (`data`: `TData`, `context`: `TContext`) => `UData`, `validation`: [`ValidationAsync`](../type-aliases/ValidationAsync.md)\<`UData`, `TContext`\>): [`MapAsync`](../type-aliases/MapAsync.md)\<`TData`, `TContext`\>
+> **mapAsync**\<`TData`, `UData`, `TContext`\>(`map`: ((`data`: `TData`) => `UData`) \| ((`data`: `TData`, `context`: `TContext`) => `UData`), `validation`: [`ValidationAsync`](../type-aliases/ValidationAsync.md)\<`UData`, `TContext`\>): [`MapAsync`](../type-aliases/MapAsync.md)\<`TData`, `TContext`\>
 
 Delegate asynchronous check to mapped data.
 
@@ -62,7 +62,7 @@ aok.mapAsync(
 
 | Parameter | Type |
 | ------ | ------ |
-| `map` | (`data`: `TData`) => `UData` \| (`data`: `TData`, `context`: `TContext`) => `UData` |
+| `map` | ((`data`: `TData`) => `UData`) \| ((`data`: `TData`, `context`: `TContext`) => `UData`) |
 | `validation` | [`ValidationAsync`](../type-aliases/ValidationAsync.md)\<`UData`, `TContext`\> |
 
 ## Returns

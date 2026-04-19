@@ -4,7 +4,7 @@
 
 # Function: mapSync()
 
-> **mapSync**\<`TData`, `UData`, `TContext`\>(`map`: (`data`: `TData`) => `UData` \| (`data`: `TData`, `context`: `TContext`) => `UData`, `validation`: [`ValidationSync`](../type-aliases/ValidationSync.md)\<`UData`, `TContext`\>): [`MapSync`](../type-aliases/MapSync.md)\<`TData`, `TContext`\>
+> **mapSync**\<`TData`, `UData`, `TContext`\>(`map`: ((`data`: `TData`) => `UData`) \| ((`data`: `TData`, `context`: `TContext`) => `UData`), `validation`: [`ValidationSync`](../type-aliases/ValidationSync.md)\<`UData`, `TContext`\>): [`MapSync`](../type-aliases/MapSync.md)\<`TData`, `TContext`\>
 
 Delegate synchronous check to mapped data.
 
@@ -55,7 +55,7 @@ aok.mapSync(
 
 | Parameter | Type |
 | ------ | ------ |
-| `map` | (`data`: `TData`) => `UData` \| (`data`: `TData`, `context`: `TContext`) => `UData` |
+| `map` | ((`data`: `TData`) => `UData`) \| ((`data`: `TData`, `context`: `TContext`) => `UData`) |
 | `validation` | [`ValidationSync`](../type-aliases/ValidationSync.md)\<`UData`, `TContext`\> |
 
 ## Returns

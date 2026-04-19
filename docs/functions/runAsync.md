@@ -4,7 +4,7 @@
 
 # Function: runAsync()
 
-> **runAsync**\<`TData`\>(`validation`: [`ValidationAsync`](../type-aliases/ValidationAsync.md)\<`TData`\>, `data`: `TData`, `options`: [`Options`](../type-aliases/Options.md)): `Promise`\<[`Result`](../type-aliases/Result.md)\<`TData`\>\>
+> **runAsync**\<`TData`\>(`validation`: [`ValidationAsync`](../type-aliases/ValidationAsync.md)\<`TData`\>, `data`: `TData`, `options?`: [`Options`](../type-aliases/Options.md)): `Promise`\<[`Result`](../type-aliases/Result.md)\<`TData`\>\>
 
 Run asynchronous validations.
 
