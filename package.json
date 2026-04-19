@@ -39,11 +39,11 @@
     "lint": "biome ci ./src",
     "lintfix": "biome check --write ./src",
     "test": "vitest run",
-    "build": "tsup"
+    "build": "tsdown"
   },
   "devDependencies": {
     "@biomejs/biome": "2.4.12",
-    "tsup": "^8.3.5",
+    "tsdown": "^0.21.9",
     "typedoc": "^0.28.19",
     "typedoc-plugin-markdown": "^4.11.0",
     "typedoc-plugin-missing-exports": "^4.1.3",
