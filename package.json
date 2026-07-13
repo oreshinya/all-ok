@@ -42,7 +42,7 @@
     "build": "tsdown"
   },
   "devDependencies": {
-    "@biomejs/biome": "2.5.0",
+    "@biomejs/biome": "2.5.2",
     "tsdown": "^0.22.3",
     "typedoc": "^0.28.19",
     "typedoc-plugin-markdown": "^4.12.0",
