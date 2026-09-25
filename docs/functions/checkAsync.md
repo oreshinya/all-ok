@@ -6,7 +6,7 @@
 
 ## Call Signature
 
-> **checkAsync**\<`TLabel`, `TData`\>(`fn`: [`FnAsync`](../-internal-/type-aliases/FnAsync.md)\<`TData`\>, `label`: `TLabel`, `message`: `string`): [`CheckAsync`](../type-aliases/CheckAsync.md)\<`TLabel`, [`FnAsync`](../-internal-/type-aliases/FnAsync.md)\<`TData`\>\>
+> **checkAsync**\<`TLabel` *extends* `string`, `TData`\>(`fn`: [`FnAsync`](../-internal-/type-aliases/FnAsync.md)\<`TData`\>, `label`: `TLabel`, `message`: `string`): [`CheckAsync`](../type-aliases/CheckAsync.md)\<`TLabel`, [`FnAsync`](../-internal-/type-aliases/FnAsync.md)\<`TData`\>\>
 
 Define asynchronous check.
 
@@ -46,7 +46,7 @@ aok.checkAsync(
 
 ## Call Signature
 
-> **checkAsync**\<`TLabel`, `TData`, `TContext`\>(`fn`: [`FnAsyncWithContext`](../-internal-/type-aliases/FnAsyncWithContext.md)\<`TData`, `TContext`\>, `label`: `TLabel`, `message`: `string`): [`CheckAsync`](../type-aliases/CheckAsync.md)\<`TLabel`, [`FnAsyncWithContext`](../-internal-/type-aliases/FnAsyncWithContext.md)\<`TData`, `TContext`\>\>
+> **checkAsync**\<`TLabel` *extends* `string`, `TData`, `TContext`\>(`fn`: [`FnAsyncWithContext`](../-internal-/type-aliases/FnAsyncWithContext.md)\<`TData`, `TContext`\>, `label`: `TLabel`, `message`: `string`): [`CheckAsync`](../type-aliases/CheckAsync.md)\<`TLabel`, [`FnAsyncWithContext`](../-internal-/type-aliases/FnAsyncWithContext.md)\<`TData`, `TContext`\>\>
 
 Define asynchronous check with your any context.
 

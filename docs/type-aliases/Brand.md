@@ -2,9 +2,9 @@
 
 ***
 
-# Type Alias: Brand\<TBrandName\>
+# Type Alias: Brand\<TBrandName *extends* [`BrandName`](BrandName.md)\>
 
-> **Brand**\<`TBrandName`\> = \{ `[BrandKey]`: `{ [T in TBrandName]: T }`; \}
+> **Brand**\<`TBrandName` *extends* [`BrandName`](BrandName.md)\> = \{ `[BrandKey]`: `{ [T in TBrandName]: T }`; \}
 
 Brand type.
 

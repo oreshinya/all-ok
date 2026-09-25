@@ -6,7 +6,7 @@
 
 ## Call Signature
 
-> **checkSync**\<`TLabel`, `TData`\>(`fn`: [`FnSync`](../-internal-/type-aliases/FnSync.md)\<`TData`\>, `label`: `TLabel`, `message`: `string`): [`CheckSync`](../type-aliases/CheckSync.md)\<`TLabel`, [`FnSync`](../-internal-/type-aliases/FnSync.md)\<`TData`\>\>
+> **checkSync**\<`TLabel` *extends* `string`, `TData`\>(`fn`: [`FnSync`](../-internal-/type-aliases/FnSync.md)\<`TData`\>, `label`: `TLabel`, `message`: `string`): [`CheckSync`](../type-aliases/CheckSync.md)\<`TLabel`, [`FnSync`](../-internal-/type-aliases/FnSync.md)\<`TData`\>\>
 
 Define synchronous check.
 
@@ -45,7 +45,7 @@ aok.checkSync(
 
 ## Call Signature
 
-> **checkSync**\<`TLabel`, `TData`, `TContext`\>(`fn`: [`FnSyncWithContext`](../-internal-/type-aliases/FnSyncWithContext.md)\<`TData`, `TContext`\>, `label`: `TLabel`, `message`: `string`): [`CheckSync`](../type-aliases/CheckSync.md)\<`TLabel`, [`FnSyncWithContext`](../-internal-/type-aliases/FnSyncWithContext.md)\<`TData`, `TContext`\>\>
+> **checkSync**\<`TLabel` *extends* `string`, `TData`, `TContext`\>(`fn`: [`FnSyncWithContext`](../-internal-/type-aliases/FnSyncWithContext.md)\<`TData`, `TContext`\>, `label`: `TLabel`, `message`: `string`): [`CheckSync`](../type-aliases/CheckSync.md)\<`TLabel`, [`FnSyncWithContext`](../-internal-/type-aliases/FnSyncWithContext.md)\<`TData`, `TContext`\>\>
 
 Define synchronous check with your any context.
 
