@@ -10,5 +10,5 @@
 
 | Type Parameter |
 | ------ |
-| `TData` |
-| `TContext` |
+| <a id="type-parameter-tdata"></a> `TData` |
+| <a id="type-parameter-tcontext"></a> `TContext` |

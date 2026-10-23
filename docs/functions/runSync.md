@@ -45,7 +45,7 @@ aok.runSync(
 
 | Type Parameter |
 | ------ |
-| `TData` |
+| <a id="type-parameter-tdata"></a> `TData` |
 
 ## Parameters
 
@@ -53,7 +53,7 @@ aok.runSync(
 | ------ | ------ |
 | `validation` | [`ValidationSync`](../type-aliases/ValidationSync.md)\<`TData`\> |
 | `data` | `TData` |
-| `options` | [`Options`](../type-aliases/Options.md) |
+| `options?` | [`Options`](../type-aliases/Options.md) |
 
 ## Returns
 

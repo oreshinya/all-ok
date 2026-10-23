@@ -12,7 +12,7 @@ Brand type.
 
 | Type Parameter |
 | ------ |
-| `TBrandName` *extends* [`BrandName`](BrandName.md) |
+| <a id="type-parameter-tbrandname"></a> `TBrandName` *extends* [`BrandName`](BrandName.md) |
 
 ## Properties
 

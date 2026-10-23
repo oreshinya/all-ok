@@ -10,7 +10,7 @@
 
 | Type Parameter |
 | ------ |
-| `TLabel` *extends* `string` |
+| <a id="type-parameter-tlabel"></a> `TLabel` *extends* `string` |
 
 ## Properties
 
