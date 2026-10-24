@@ -54,9 +54,9 @@ aok.mapAsync(
 
 | Type Parameter |
 | ------ |
-| `TData` |
-| `UData` |
-| `TContext` |
+| <a id="type-parameter-tdata"></a> `TData` |
+| <a id="type-parameter-udata"></a> `UData` |
+| <a id="type-parameter-tcontext"></a> `TContext` |
 
 ## Parameters
 

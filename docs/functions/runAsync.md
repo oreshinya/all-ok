@@ -53,7 +53,7 @@ await aok.runAsync(
 
 | Type Parameter |
 | ------ |
-| `TData` |
+| <a id="type-parameter-tdata"></a> `TData` |
 
 ## Parameters
 
@@ -61,7 +61,7 @@ await aok.runAsync(
 | ------ | ------ |
 | `validation` | [`ValidationAsync`](../type-aliases/ValidationAsync.md)\<`TData`\> |
 | `data` | `TData` |
-| `options` | [`Options`](../type-aliases/Options.md) |
+| `options?` | [`Options`](../type-aliases/Options.md) |
 
 ## Returns
 

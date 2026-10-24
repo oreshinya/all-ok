@@ -28,8 +28,8 @@ aok.checkSync(
 
 | Type Parameter |
 | ------ |
-| `TLabel` *extends* `string` |
-| `TData` |
+| <a id="type-parameter-tlabel"></a> `TLabel` *extends* `string` |
+| <a id="type-parameter-tdata"></a> `TData` |
 
 ### Parameters
 
@@ -71,9 +71,9 @@ aok.checkSync(
 
 | Type Parameter |
 | ------ |
-| `TLabel` *extends* `string` |
-| `TData` |
-| `TContext` |
+| <a id="type-parameter-tlabel-1"></a> `TLabel` *extends* `string` |
+| <a id="type-parameter-tdata-1"></a> `TData` |
+| <a id="type-parameter-tcontext"></a> `TContext` |
 
 ### Parameters
 

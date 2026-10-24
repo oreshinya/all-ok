@@ -57,8 +57,8 @@ await db.transaction(async (tx) => {
 
 | Type Parameter |
 | ------ |
-| `TData` |
-| `TContext` |
+| <a id="type-parameter-tdata"></a> `TData` |
+| <a id="type-parameter-tcontext"></a> `TContext` |
 
 ## Parameters
 
@@ -67,7 +67,7 @@ await db.transaction(async (tx) => {
 | `validation` | [`ValidationAsync`](../type-aliases/ValidationAsync.md)\<`TData`, `TContext`\> |
 | `data` | `TData` |
 | `context` | `TContext` |
-| `options` | [`Options`](../type-aliases/Options.md) |
+| `options?` | [`Options`](../type-aliases/Options.md) |
 
 ## Returns
 

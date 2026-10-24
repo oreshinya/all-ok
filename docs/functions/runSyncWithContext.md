@@ -51,8 +51,8 @@ aok.runSyncWithContext(
 
 | Type Parameter |
 | ------ |
-| `TData` |
-| `TContext` |
+| <a id="type-parameter-tdata"></a> `TData` |
+| <a id="type-parameter-tcontext"></a> `TContext` |
 
 ## Parameters
 
@@ -61,7 +61,7 @@ aok.runSyncWithContext(
 | `validation` | [`ValidationSync`](../type-aliases/ValidationSync.md)\<`TData`, `TContext`\> |
 | `data` | `TData` |
 | `context` | `TContext` |
-| `options` | [`Options`](../type-aliases/Options.md) |
+| `options?` | [`Options`](../type-aliases/Options.md) |
 
 ## Returns
 

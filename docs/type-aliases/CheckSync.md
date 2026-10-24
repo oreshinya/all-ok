@@ -10,8 +10,8 @@
 
 | Type Parameter |
 | ------ |
-| `TLabel` *extends* `string` |
-| `TFnSync` |
+| <a id="type-parameter-tlabel"></a> `TLabel` *extends* `string` |
+| <a id="type-parameter-tfnsync"></a> `TFnSync` |
 
 ## Properties
 
